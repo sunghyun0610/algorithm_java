@@ -51,6 +51,8 @@ public class Big_Num_Law {
 
     }
 
+
+
 }
 //큰수와 2번째 큰수를 찾을때 배열을 오름차순 정리해서 맨에서 첫번쨰 두번째 수를 가져오는 방법!!
 
@@ -106,3 +108,4 @@ public class Q2_HighNumber{
 *
 *
 * */
+
