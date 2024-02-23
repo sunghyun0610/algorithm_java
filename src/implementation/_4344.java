@@ -25,6 +25,11 @@ public class _4344 {
                 }
             }
 
+            /*
+            향상된 for문 -> 배열을 필요로하고 배열의 크기만큼 반복한다.
+            * scores 배열의 각 원소를 처음부터 끝까지 순회합니다. 이 때, 각 반복에서 배열의 현재 원소는 score 변수에 할당됩니다.
+            * */
+
             double percentage = (double) count / N * 100; // 평균을 넘는 학생의 비율
             System.out.printf("%.3f%%\n", percentage); // 결과 출력
         }
