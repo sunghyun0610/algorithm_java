@@ -31,12 +31,12 @@ class Solution_2 {
         } //HashMap사용하여 name : yearning과 매치. 두개의 인덱스 번호가 비례하기 때문!
 
         for(int i =0; i< photo.length;i++){
-            String[] persons = photo[i];
+            String[] persons = photo[i];//photo 이중배열 한 행씩 저장
             int score = 0;
             for(int j=0; j<persons.length; j++){
                 String person = persons[j];
-                if(map.containsKey(person)){
-                    score+=map.get(person);
+                if(map.containsKey(person)){//map 에서 이름 있는지 확인하는 코드
+                    score+=map.get(person);//map에서 name에 대응하는 yearning값 더해줌.(있다면)
                 }
             }
             answer[i]=score;
@@ -62,5 +62,8 @@ public class PG_Memory_Score {
             // 이는 배열의 각 값이 개별적으로 출력되기 때문에, 대괄호나 쉼표 없이 순수한 값만 콘솔에 표시됩니다.
         }
         System.out.println(Arrays.toString(answer));
+        Solution_2 answer2=new Solution_2();
+        int [] result_2=answer2.solution(name,score,photo);
+        System.out.println(Arrays.toString(result_2));
     }
 }
