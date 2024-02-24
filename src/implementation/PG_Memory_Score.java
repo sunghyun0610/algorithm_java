@@ -23,7 +23,7 @@ class Solution {
 
 class Solution_2 {
     public int[] solution(String[] name, int[] yearning, String[][] photo) {
-        int[] answer = new int[photo.length];
+        int[] answer = new int[photo.length];//배열인 경우 length 사용 하지만 String 이나 ArrayList길이 구하려면 length()사용해야함.
         HashMap<String,Integer> map = new LinkedHashMap<>();
         //Map : 키(Key)와 값(value)의 쌍으로 연관지어 이루어진 데이터의 집합
         for(int i=0; i< name.length; i++){
