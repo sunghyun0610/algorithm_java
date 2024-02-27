@@ -13,7 +13,7 @@ public class _1546 {
         int N= Integer.parseInt(br.readLine());//시험본 과목 개수 입력
         double [] score=new double[N];
         double max=0;
-        StringTokenizer st= new StringTokenizer(br.readLine()," ");
+        StringTokenizer st= new StringTokenizer(br.readLine()," ");//입력 받은 문자열을 공백으로 구분하겠다.
         for(int i=0;i<N;i++){
             score[i]=Double.parseDouble(st.nextToken());
             if(max<score[i])
