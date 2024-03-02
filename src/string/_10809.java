@@ -10,6 +10,33 @@ public class _10809 {
         int [] Alphabet=new int[26];//automatically 0으로 초기화 됨.
         Arrays.fill(Alphabet,-1);//배열값 전부 -1로 초기화
         for(int i=0; i<S.length(); i++){
+
+            char ch=S.charAt(i);
+            if(Alphabet[ch-'a']==-1){
+             Alphabet[ch-'a']=i;
+            }
+        }
+
+        for(int num:Alphabet){
+            System.out.print(num+" ");
+        }
+
+    }
+}
+//소문자 아스키코드 :97~122
+
+/*
+*
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        String S=sc.next();
+        int [] Alphabet=new int[26];//automatically 0으로 초기화 됨.
+        Arrays.fill(Alphabet,-1);//배열값 전부 -1로 초기화
+        for(int i=0; i<S.length(); i++){
             for(int j=0;j<26;j++){
                 if(S.charAt(i)==j+97 && Alphabet[j]<0){
                     Alphabet[j]=i;//위치 저장
@@ -24,4 +51,4 @@ public class _10809 {
 
     }
 }
-//소문자 아스키코드 :97~122
+//소문자 아스키코드 :97~122*/
