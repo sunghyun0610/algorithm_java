@@ -1,4 +1,4 @@
-package implementation;
+package two_pointer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
