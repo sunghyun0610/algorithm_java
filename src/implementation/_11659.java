@@ -7,7 +7,7 @@ import java.util.StringTokenizer;
 
 public class _11659 {
     public static void main(String [] args)throws IOException {
-        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));
+        BufferedReader br= new BufferedReader(new InputStreamReader(System.in));// bufferedReader 객체 선언
         StringTokenizer st = new StringTokenizer(br.readLine());//공백으로 구분된 여러 데이터를 한 줄에서 "입력"받을 때 사용
         int N = Integer.parseInt(st.nextToken()); // 사용자로부터 입력받은수의 개수 읽어서 변수 N에다 대입연산하기.
         int M = Integer.parseInt(st.nextToken()); // 몇 번 합해야 하는지 횟수
