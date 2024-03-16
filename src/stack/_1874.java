@@ -16,6 +16,8 @@ public class _1874 {
             num[i]=Integer.parseInt(br.readLine());
         }
 
+
+
         Stack<Integer> stack=new Stack<>();
 
 
