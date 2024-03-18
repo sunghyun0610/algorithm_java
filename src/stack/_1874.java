@@ -20,7 +20,7 @@ public class _1874 {
         StringBuilder sb = new StringBuilder();
         int i=1;
         while(j<n){
-            if(!stackInt.isEmpty() && stackInt.peek()==num[i]){
+            if(!stackInt.isEmpty() && stackInt.peek()==num[j]){ //왜 num[j]ww지?
                 stackInt.pop();
                 sb.append("-\n");
                 j++;
@@ -30,10 +30,14 @@ public class _1874 {
                     System.out.println("NO");
                     return;//아예 종료할때는 return!!!!!!
                 }
+                stackInt.push(i);
+                sb.append("+\n");
+                i++;
+
             }
         }
 
-
+        System.out.println(sb.toString());
 
     }
 
