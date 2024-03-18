@@ -15,10 +15,23 @@ public class _1874 {
         for (int i=0;i<n;i++){
             num[i]=Integer.parseInt(br.readLine());
         }
-
-
-
-        Stack<Integer> stack=new Stack<>();
+        int j=0;//j는 pop으로 뽑아낼 때마다 카운트
+        Stack<Integer> stackInt = new Stack<>();
+        StringBuilder sb = new StringBuilder();
+        int i=1;
+        while(j<n){
+            if(!stackInt.isEmpty() && stackInt.peek()==num[i]){
+                stackInt.pop();
+                sb.append("-\n");
+                j++;
+            }
+            else {
+                if(i>n){
+                    System.out.println("NO");
+                    return;//아예 종료할때는 return!!!!!!
+                }
+            }
+        }
 
 
 
