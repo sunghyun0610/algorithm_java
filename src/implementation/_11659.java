@@ -20,7 +20,7 @@ public class _11659 {
             num[i]=Integer.parseInt(st.nextToken());//숫자들 입력받기
             tmp+=num[i];
             sum[i+1]=tmp;
-        }
+        }//합배열 저장완료
         for(int k=0; k<M; k++){
             st=new StringTokenizer(br.readLine());
             int i= Integer.parseInt(st.nextToken());

@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/stack/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/implementation/_11659.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/implementation/_11659.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stack/_1874.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/stack/_1874.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,12 +71,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/stack/_1874.java</url>
-          <line>18</line>
+          <line>16</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/stack/_1874.java</url>
-          <line>37</line>
+          <line>34</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
