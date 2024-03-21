@@ -15,9 +15,7 @@ public class _2164 {
         }
         while(queue.size()>1){
             queue.poll();//맨위의 값 반환 후 삭제
-            int num=queue.peek();
-            queue.poll();
-            queue.add(num);
+            queue.add(queue.poll());//맨 위의값 삭제후 그 값 다시 추가
         }
         int result=queue.peek();
         System.out.println(result);
