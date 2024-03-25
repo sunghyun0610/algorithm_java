@@ -26,8 +26,12 @@ public class _11286 {
             if(x!=0){
                 pq.offer(x);//x가 0이 아니라면 배열에 x 값 추가
             }
-            else if (pq.isEmpty()){
+            else if (x==0&&pq.isEmpty()){
                 System.out.println("0");
+            }
+            else {
+                System.out.println(pq.poll());
+
             }
         }
     }
