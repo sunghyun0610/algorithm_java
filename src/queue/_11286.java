@@ -11,7 +11,7 @@ public class _11286 {
         //절댓값 힙 : x!=0이면 배열에 삽입, x==0이면 절댓값이 가장 작은 수 출력 후 제거.
 
         PriorityQueue<Integer> pq= new PriorityQueue<>(new Comparator<Integer>() {
-            //Compartor : 우선순위 큐에서 요소의 우선순위를 결정하는데 사용.
+            //Compartor : 인터페이스로 객체를 비교할 수 있도록 만든다. 여기에서는 우선순위 큐에서 요소의 우선순위를 결정하는데 사용되었다.
             @Override
             public int compare(Integer a, Integer b) {
                 if(Math.abs(a)==Math.abs(b)) {
