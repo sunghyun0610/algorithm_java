@@ -45,6 +45,21 @@ public class _1427 {
         return num;
     }
 
+    public static int [] insertion_sort(int[]num){
+
+        //삽입정렬 : 현재 정렬되있는 부분 중에서 적절한 위치에 삽입시키는 방법
+        for (int i = 1; i < num.length; i++) {
+            int temp = num[i];//선택된 숫자
+            int j;
+            for (j = i; j > 0 && num[j - 1] < temp; j--) {
+                num[j] = num[j - 1]; // 현재 요소보다 큰 요소들을 한 칸씩 뒤로 이동
+            }
+            num[j] = temp; // 적절한 위치에 현재 요소 삽입
+        };
+
+        return num;
+    }
+
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
@@ -52,7 +67,7 @@ public class _1427 {
         for (int i=0;i<str.length();i++){
             num[i]=Character.getNumericValue(str.charAt(i));// Character,getNumericValue : 단일문자 정수 변환
         }
-        selection_sort(num);
+        insertion_sort(num);
         for(int k : num){
             System.out.print(k);
         }
