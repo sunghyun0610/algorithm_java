@@ -104,7 +104,7 @@ public static class QuickSort{//pivot이 중간값
 
 public static class MergeSort{
         public static void mergeSort(int [] arr){
-            int[]temp =new int[arr.length];//임시 저장소
+            int[]temp =new int[arr.length];//임시 저장소 mergesort는 별도의 저장공간필요 -> 저장공간 부족할땐 quicksort사용할 것
             mergeSort(arr,temp,0,arr.length-1);
         }
 
