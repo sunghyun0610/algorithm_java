@@ -60,7 +60,7 @@ public class _1427 {
 
         return num;
     }
-public class QuickSort{//pivot이 중간값
+public static class QuickSort{//pivot이 중간값
         //메서드 오버로딩
 //        첫 번째 quickSort 메소드는 사용자가 배열만 넘겨주면 전체 배열을 정렬할 수 있도록 설계되었습니다. 이 메소드는 내부적으로 배열의 시작 인덱스와 끝 인덱스를 매개변수로 하는 두 번째 quickSort 메소드를 호출합니다.
 //    두 번째 quickSort 메소드는 실제 퀵 정렬 로직을 수행합니다. 이 메소드는 배열, 시작 인덱스, 끝 인덱스를 매개변수로 받아, 지정된 범위 내에서 배열을 정렬합니다.
@@ -69,9 +69,9 @@ public class QuickSort{//pivot이 중간값
         quickSort(arr, 0, arr.length-1);
     }
     private static void quickSort(int[] arr, int start, int end){
-        int part2=partition(arr, start,end);//return된 start값이 저장됨.
+        int part2=partition(arr, start,end);//return된 start값(=오른쪽 파티션 첫번째 인덱스)이 저장됨.
         //양쪽 파티션의 크기가 1이되면 더 이상 재귀 호출 X
-        if(start<part2-1){//pivot보다 작은그룹
+        if(start<part2-1){//오른쪽 파티션이 start 바로 다음에서 시작한다면 크기가 1이므로 재귀 호출 안한다. 1개 이상 차이날때만 재귀호출
             quickSort(arr,start,part2-1);
         }
         if(part2<end){//pivot보다 큰 그룹
@@ -81,8 +81,8 @@ public class QuickSort{//pivot이 중간값
     private static int partition(int[] arr, int start,int end){
         int pivot= arr[(start+end)/2];
         while(start<=end){
-            while(arr[start]<pivot) start++;//왼쪽에서부터 기준값보다 작은 값은 무시
-            while (arr[end]>pivot) end--;//오른쪽에서부터 기준값보다 큰값들은 무시
+            while(arr[start]>pivot) start++;//왼쪽에서부터 기준값보다 작은 값은 무시
+            while (arr[end]<pivot) end--;//오른쪽에서부터 기준값보다 큰값들은 무시
             if(start<=end){
                 swap(arr,start,end);
                 start++;
