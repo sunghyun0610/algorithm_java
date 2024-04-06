@@ -102,6 +102,47 @@ public static class QuickSort{//pivot이 중간값
 
 }
 
+public static class MergeSort{
+        public static void mergeSort(int [] arr){
+            int[]temp =new int[arr.length];//임시 저장소
+            mergeSort(arr,temp,0,arr.length-1);
+        }
+
+        public static void mergeSort(int [] arr, int[]temp,int start,int end){
+            if(start<end) {//배열 크기가 2이상일때만 함
+                int mid = (start + end) / 2;
+                mergeSort(arr,temp,start,mid);
+                mergeSort(arr,temp,mid+1,end);
+                merge(arr,temp,start,mid,end);
+
+            }
+        }
+        private static void merge(int[]arr, int[]temp,int start, int mid,int end){
+            for(int i=start;i<=end;i++){
+                temp[i]=arr[i]; //배열 복제하기
+            }
+            int part1=start;
+            int part2=mid+1;
+            int index=start;//진짜 배열 인덱스 기억하기 위한 변수
+            while (part1<=mid && part2<=end){
+                if(temp[part1]>=temp[part2]){
+                    arr[index]=temp[part1];
+                    part1++;
+                }
+                else {
+                    arr[index]=temp[part2];
+                    part2++;
+                }
+                index++;
+            }
+            for(int i=0;i<=mid-part1;i++){//만약 뒤쪽 배열은 비었는데, 앞쪽 배열이 숫자가 남은경우
+                arr[index+i]=temp[part1+i];
+            }
+            //뒤쪽 배열 데이터는 arr에 이미 자리하고있기에 그냥 놔두면 됨.
+
+        }
+}
+
     public static void main(String [] args){
         Scanner sc=new Scanner(System.in);
         String str=sc.next();
@@ -109,7 +150,7 @@ public static class QuickSort{//pivot이 중간값
         for (int i=0;i<str.length();i++){
             num[i]=Character.getNumericValue(str.charAt(i));// Character,getNumericValue : 단일문자 정수 변환
         }
-        QuickSort.quickSort(num);//클래스 이름. 메서드이름() -> why? static 메서드 즉, 클래스 메서드이기 때문.
+        MergeSort.mergeSort(num);//클래스 이름. 메서드이름() -> why? static 메서드 즉, 클래스 메서드이기 때문.
 
         for(int k : num){
             System.out.print(k);
