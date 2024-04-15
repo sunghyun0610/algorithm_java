@@ -21,7 +21,6 @@ public class _12891 {
                 count[0]++;
             else if(str.charAt(i)=='C')
                 count[1]++;
-
             else if(str.charAt(i)=='G')
                 count[2]++;
             else if (str.charAt(i)=='T')

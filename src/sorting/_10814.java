@@ -67,11 +67,11 @@ public class _10814 {
         }
 
 
-        Arrays.sort(ps, new Comparator<Person>() {
+        Arrays.sort(ps, new Comparator<Person>() {//기본적으로 오름차순 기준으로한다.
             @Override
             public int compare(Person p1, Person p2) {
                 if (p1.age != p2.age) {
-                    return p1.age - p2.age;
+                    return p1.age - p2.age;//양수: 첫 번째 객체(p1)가 두 번째 객체(p2)보다 크다는 것을 의미합니다. 즉, p1의 나이가 p2의 나이보다 큰 경우, 양수가 반환되고, p1은 p2보다 정렬 순서상 뒤에 위치하게 됩니다-> 오름차순 이기 때문.
                 } else {
                     return 0; // 나이가 같으면 원래 순서를 유지 (안정적 정렬)
                 }
