@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sorting/_11650.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graph/_18352.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/_4673.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/_2309.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/_2309.java" afterDir="false" />
     </list>
@@ -63,16 +64,6 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/stack/_1874.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/stack/_1874.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

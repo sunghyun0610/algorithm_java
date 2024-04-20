@@ -19,12 +19,12 @@ public class _2309 {
             //sum에서 2개빼서 100이되면 그게 정답
         //int targetSum = totalSum - 100;  // 전체 합에서 100을 빼서 목표값을 설정 이것도 가능
             int idx[]=new int[9];
-            int num1=0;
-            int num2=0;
+                    int num1=0;
+                    int num2=0;
 
-            for(int i=0;i<8;i++){//끝까지 탐색할 필요없다 밑에서 해주니까
-                for(int j=i+1;j<9;j++){
-                if(sum-height[i]-height[j]==100){
+                    for(int i=0;i<8;i++){//끝까지 탐색할 필요없다 밑에서 해주니까
+                        for(int j=i+1;j<9;j++){
+                            if(sum-height[i]-height[j]==100){
                     num1=i;
                     num2=j;
                     break;
