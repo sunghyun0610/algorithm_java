@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/implementation/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/implementation/Testt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/implementation/_1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/dfs/_11724.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/HelloWorld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.HelloWorld.executor": "Run",
     "Application.SolutionTest.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Testt.executor": "Run",
@@ -94,7 +91,10 @@
       <workItem from="1719309257116" duration="224000" />
       <workItem from="1719309487082" duration="7000" />
       <workItem from="1719361362798" duration="11000" />
-      <workItem from="1719973831955" duration="6355000" />
+      <workItem from="1719973831955" duration="14685000" />
+      <workItem from="1720073120418" duration="153000" />
+      <workItem from="1720141744400" duration="5000" />
+      <workItem from="1721093244615" duration="1399000" />
     </task>
     <servers />
   </component>
