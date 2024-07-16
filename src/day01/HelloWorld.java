@@ -9,6 +9,8 @@ public class HelloWorld {
         System.out.println("잘해보자");
 
         int a=100;
+
+        System.out.println("a = " + a);//문자열 + 변수 => 문자열 결합이 일어남.
         String text="Hello World";
         double pi=3.141592;
 
