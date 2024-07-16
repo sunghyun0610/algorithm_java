@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day01/OperatorEx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/OperatorEx2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/day01/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/day01/HelloWorld.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,7 @@
   "keyToString": {
     "Application.HelloWorld.executor": "Run",
     "Application.OperatorEx.executor": "Run",
+    "Application.OperatorEx2.executor": "Run",
     "Application.SolutionTest.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Testt.executor": "Run",
@@ -96,7 +96,7 @@
       <workItem from="1719973831955" duration="14685000" />
       <workItem from="1720073120418" duration="153000" />
       <workItem from="1720141744400" duration="5000" />
-      <workItem from="1721093244615" duration="5395000" />
+      <workItem from="1721093244615" duration="6971000" />
     </task>
     <servers />
   </component>
