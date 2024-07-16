@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day01/Conversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day01/MultipleTable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/ArrayTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/ArrayTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/ArrayTest3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/day01/Member.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,9 +40,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ArrayTest.executor": "Run",
+    "Application.ArrayTest2.executor": "Run",
     "Application.Conversion.executor": "Run",
     "Application.Grade.executor": "Run",
     "Application.HelloWorld.executor": "Run",
+    "Application.Member.executor": "Run",
     "Application.MultipleTable.executor": "Run",
     "Application.OperatorEx.executor": "Run",
     "Application.OperatorEx2.executor": "Run",
@@ -101,7 +106,7 @@
       <workItem from="1719973831955" duration="14685000" />
       <workItem from="1720073120418" duration="153000" />
       <workItem from="1720141744400" duration="5000" />
-      <workItem from="1721093244615" duration="14090000" />
+      <workItem from="1721093244615" duration="17117000" />
     </task>
     <servers />
   </component>
