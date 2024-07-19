@@ -5,19 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day01/DayOfYear.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day01/Max.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day01/PointSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day01/SalaryCal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day02/Applicant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/day02/JobKorea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/Borrowable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/GeneralBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/LibraryApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/ReferenceBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my/library/RentalRecord.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +128,7 @@
       <workItem from="1719973831955" duration="14685000" />
       <workItem from="1720073120418" duration="153000" />
       <workItem from="1720141744400" duration="5000" />
-      <workItem from="1721093244615" duration="44497000" />
+      <workItem from="1721093244615" duration="56051000" />
     </task>
     <servers />
   </component>
