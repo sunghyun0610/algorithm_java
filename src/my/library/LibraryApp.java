@@ -101,7 +101,5 @@ public class LibraryApp {
             System.out.println("해당 도서는 유효하지 않습니다.");
         }
     }
-
-
     //그 책이 도서관에 있어서 대여가능한지 조회하는 로직
 }
