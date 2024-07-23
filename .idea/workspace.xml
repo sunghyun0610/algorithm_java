@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/day01/Man.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/_1289.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/_5215.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +60,8 @@
     "Application.Testt.executor": "Run",
     "Application._1.executor": "Run",
     "Application._11724.executor": "Run",
+    "Application._1289.executor": "Run",
+    "Application._5215.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -131,7 +134,8 @@
       <workItem from="1720073120418" duration="153000" />
       <workItem from="1720141744400" duration="5000" />
       <workItem from="1721093244615" duration="67436000" />
-      <workItem from="1721636069611" duration="645000" />
+      <workItem from="1721636069611" duration="1121000" />
+      <workItem from="1721696564037" duration="8063000" />
     </task>
     <servers />
   </component>
