@@ -8,16 +8,14 @@ import java.util.List;
 // 오늘의 실습3 : Map을 활용하여 데이터 저장
 public class BookManagerImpl implements IBookManager {
 
-
+    private static final int SIZE = 100;
+    private Book[] books = new Book[SIZE];;
     // 클래스내에 생성자가 하나라도 존재하면 컴파일러는 기본생성자를 끼워넣지 않음
     // 이제 다른 클래스에서 new BookManagerImpl을 못하는 상태가 되었음.
     private BookManagerImpl() {
-        books = new Book[SIZE];
     }
 
     static int cnt=0;
-
-
 
     private static BookManagerImpl instance = new BookManagerImpl();
     public static BookManagerImpl getInstance() {
@@ -79,12 +77,13 @@ public class BookManagerImpl implements IBookManager {
     public Magazine[] getMagazines(){
         Magazine[] magazines = new Magazine[cnt];//책이 아닌 잡지만 저장
         int tmp=0;
-        for(int i=0;i<cnt;i++){
-            if(books[i] instanceof Magazine){
-                magazines[tmp]=(Magazine)books[i];
+        for (int i = 0; i < cnt; i++) {
+            if (books[i].getClass() == Magazine.class) {//getClass는 상속관계 생각하지 않고 그 클래스만 가져온다.
+                magazines[tmp] = (Magazine) books[i];
                 tmp++;
             }
         }
+
         Magazine[] result = new Magazine[tmp];
         System.arraycopy(magazines, 0, result, 0, tmp);
         return result;
@@ -93,12 +92,13 @@ public class BookManagerImpl implements IBookManager {
 
 
     @Override
-    public Book[] getBooks(){
+    public Book[] getBooks() {
         Book[] pureBooks = new Book[cnt];
-        int tmp=0;//인덱스 체크해야되니까
-        for(int i=0;i<cnt;i++){
-            if(books[i] instanceof Book && !(books[i] instanceof Magazine)){
-                pureBooks[tmp++]=(Book) books[i];
+        int tmp = 0;//인덱스 체크해야되니까
+        for (int i = 0; i < cnt; i++) {
+            if (books[i].getClass() == Book.class) {//getClass는 상속관계 생각하지 않고 그 클래스만 가져온다.
+                pureBooks[tmp] = (Book) books[i];
+                tmp++;
             }
         }
         Book[] result = new Book[tmp];
@@ -163,8 +163,7 @@ public class BookManagerImpl implements IBookManager {
     }
 
     ////////////////////////////////////////////////////////////////////////////////
-    private static final int SIZE = 100;
-    private Book[] books;
+
 	private List<Book> Listbooks;
 //	private Map<String, Book> books;
 }

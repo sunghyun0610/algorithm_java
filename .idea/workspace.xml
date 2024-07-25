@@ -5,18 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/swea/Adder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swea/Alpha.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swea/Change.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swea/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/BookManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/IBookManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/ISBNNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws/QuantityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java_hard/StreamTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/recursion/_부분집합.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/recursion/_순열.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/recursion/_조합.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/BookValidator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/IBookManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/III_BookManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/ISBNNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/Magazine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws3/QuantityException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ws/BookManagerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ws/BookManagerImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +78,13 @@
     "Application._11724.executor": "Run",
     "Application._1289.executor": "Run",
     "Application._5215.executor": "Run",
+    "Application._순열.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/moon/Desktop/algorithm_java",
+    "last_opened_file_path": "/Users/moon/Desktop/algorithm_java/src/ws3",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -98,6 +101,9 @@
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="my.library" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ws3" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,7 +155,7 @@
       <workItem from="1720141744400" duration="5000" />
       <workItem from="1721093244615" duration="67436000" />
       <workItem from="1721636069611" duration="1121000" />
-      <workItem from="1721696564037" duration="43510000" />
+      <workItem from="1721696564037" duration="62073000" />
     </task>
     <servers />
   </component>
