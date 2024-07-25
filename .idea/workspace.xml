@@ -5,8 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/swea/_1289.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/swea/_5215.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/Adder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/Alpha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/Change.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/swea/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/BookManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/IBookManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/ISBNNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/Magazine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws/QuantityException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,10 +48,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Adder.executor": "Run",
+    "Application.Alpha.executor": "Run",
     "Application.ArrayTest.executor": "Run",
     "Application.ArrayTest2.executor": "Run",
     "Application.ArrayTest3.executor": "Run",
     "Application.BasicInheritance.executor": "Run",
+    "Application.BookTest.executor": "Run",
+    "Application.Change.executor": "Run",
     "Application.Conversion.executor": "Run",
     "Application.DayOfYear.executor": "Run",
     "Application.Grade.executor": "Run",
@@ -55,6 +68,7 @@
     "Application.OperatorEx2.executor": "Run",
     "Application.PointSort.executor": "Run",
     "Application.SolutionTest.executor": "Run",
+    "Application.Sub.executor": "Run",
     "Application.SwitchTest.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Testt.executor": "Run",
@@ -77,7 +91,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -135,7 +149,7 @@
       <workItem from="1720141744400" duration="5000" />
       <workItem from="1721093244615" duration="67436000" />
       <workItem from="1721636069611" duration="1121000" />
-      <workItem from="1721696564037" duration="8063000" />
+      <workItem from="1721696564037" duration="43510000" />
     </task>
     <servers />
   </component>
