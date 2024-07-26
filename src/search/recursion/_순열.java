@@ -19,7 +19,7 @@ public class _순열 {
             System.out.println(Arrays.toString(result));
             return;//R개만큼 다 뽑았으면 돌아가야지
         }
-        for(int i=0; i<N; i++){
+        for(int i=0; i<N; i++){//재귀가 한번 호출되면 A부터 E까지 모든 카드를 한번씩 다 보고 끝남.
             if(visited[i]) continue;//쓴 문자라면 넘겨야지
 
             visited[i] =true;//// 먼저 호출된 재귀가 안쓰는 카드네?내가 맡은자리 idx에다 i번 카드를 써볼게요
