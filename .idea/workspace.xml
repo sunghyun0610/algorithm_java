@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/tcp/TCPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tcp/TCPServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/udp/UDPClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/BookManagerImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/BookTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/IBookManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/ISBNNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ws_save/QuantityException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chatServer/MultiChattingClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chatServer/MultiChattingServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/_1920.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ws/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/udp/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/udp/UDPClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +57,7 @@
     "Application.LibraryApp.executor": "Run",
     "Application.Max.executor": "Run",
     "Application.Member.executor": "Run",
+    "Application.MultiChattingClient.executor": "Run",
     "Application.MultipleTable.executor": "Run",
     "Application.OperatorEx.executor": "Run",
     "Application.OperatorEx2.executor": "Run",
@@ -76,9 +70,11 @@
     "Application.TCPServer.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Testt.executor": "Run",
+    "Application.UDPClient.executor": "Run",
     "Application._1.executor": "Run",
     "Application._11724.executor": "Run",
     "Application._1289.executor": "Run",
+    "Application._1920.executor": "Run",
     "Application._5215.executor": "Run",
     "Application._부분집합.executor": "Run",
     "Application._순열.executor": "Run",
@@ -98,7 +94,7 @@
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
+    "settings.editor.selected.configurable": "editor.preferences.completion",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -161,7 +157,7 @@
       <workItem from="1721093244615" duration="67436000" />
       <workItem from="1721636069611" duration="1121000" />
       <workItem from="1721696564037" duration="66044000" />
-      <workItem from="1721961661430" duration="17893000" />
+      <workItem from="1721961661430" duration="32404000" />
     </task>
     <servers />
   </component>
