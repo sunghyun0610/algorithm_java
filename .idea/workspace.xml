@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/stream/InputStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tcp/TCPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tcp/TCPServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/udp/UDPClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/BookManagerImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/BookTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/IBookManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/ISBNNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/Magazine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ws_save/QuantityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ws/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ws/Book.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +60,7 @@
     "Application.DayOfYear.executor": "Run",
     "Application.Grade.executor": "Run",
     "Application.HelloWorld.executor": "Run",
+    "Application.InputStream.executor": "Run",
     "Application.LibraryApp.executor": "Run",
     "Application.Max.executor": "Run",
     "Application.Member.executor": "Run",
@@ -60,6 +72,8 @@
     "Application.SolutionTest.executor": "Run",
     "Application.Sub.executor": "Run",
     "Application.SwitchTest.executor": "Run",
+    "Application.TCPClient.executor": "Run",
+    "Application.TCPServer.executor": "Run",
     "Application.Test.executor": "Run",
     "Application.Testt.executor": "Run",
     "Application._1.executor": "Run",
@@ -74,7 +88,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/moon/Desktop/algorithm_java/src/ws3",
+    "last_opened_file_path": "/Users/moon/Desktop/algorithm_java/src/ws_save",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -93,6 +107,7 @@
       <recent name="my.library" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/ws_save" />
       <recent name="$PROJECT_DIR$/src/ws3" />
     </key>
   </component>
@@ -146,7 +161,7 @@
       <workItem from="1721093244615" duration="67436000" />
       <workItem from="1721636069611" duration="1121000" />
       <workItem from="1721696564037" duration="66044000" />
-      <workItem from="1721961661430" duration="3974000" />
+      <workItem from="1721961661430" duration="17893000" />
     </task>
     <servers />
   </component>

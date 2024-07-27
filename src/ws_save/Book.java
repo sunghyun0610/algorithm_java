@@ -1,10 +1,12 @@
-package ws;
+package ws_save;
+
 
 import java.io.Serializable;
 
 /**
  * 도서 정보를 나타내는 클래스
  */
+// DTO == VO == Bean(특별한 기능 없이 그저 변수처럼 데이터만 담아서 들고다니는 용도의 클래스)
 public class Book implements Serializable {
     /** 고유 번호 */
     private String isbn;
