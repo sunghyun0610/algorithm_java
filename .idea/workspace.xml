@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/chatServer/MultiChattingClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chatServer/MultiChattingServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/_1920.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sorting/_2750II.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/udp/UDPClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/udp/UDPClient.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +72,7 @@
     "Application._11724.executor": "Run",
     "Application._1289.executor": "Run",
     "Application._1920.executor": "Run",
+    "Application._2750II.executor": "Run",
     "Application._5215.executor": "Run",
     "Application._부분집합.executor": "Run",
     "Application._순열.executor": "Run",
@@ -157,7 +155,8 @@
       <workItem from="1721093244615" duration="67436000" />
       <workItem from="1721636069611" duration="1121000" />
       <workItem from="1721696564037" duration="66044000" />
-      <workItem from="1721961661430" duration="32404000" />
+      <workItem from="1721961661430" duration="34479000" />
+      <workItem from="1722139750599" duration="12813000" />
     </task>
     <servers />
   </component>
