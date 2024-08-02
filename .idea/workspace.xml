@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/stack/_10828.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/graph/_1260.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/queue/_10845.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,6 +61,7 @@
     "Application.OperatorEx2.executor": "Run",
     "Application.OutputStream.executor": "Run",
     "Application.PointSort.executor": "Run",
+    "Application.ScannerTest.executor": "Run",
     "Application.SolutionTest.executor": "Run",
     "Application.Sub.executor": "Run",
     "Application.SwitchTest.executor": "Run",
@@ -73,6 +75,7 @@
     "Application._10828.executor": "Run",
     "Application._10989.executor": "Run",
     "Application._11724.executor": "Run",
+    "Application._1260.executor": "Run",
     "Application._1289.executor": "Run",
     "Application._1920.executor": "Run",
     "Application._2750II.executor": "Run",
@@ -161,7 +164,7 @@
       <workItem from="1721696564037" duration="66044000" />
       <workItem from="1721961661430" duration="34479000" />
       <workItem from="1722139750599" duration="15310000" />
-      <workItem from="1722318518591" duration="32395000" />
+      <workItem from="1722318518591" duration="46400000" />
     </task>
     <servers />
   </component>
