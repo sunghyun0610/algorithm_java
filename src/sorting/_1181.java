@@ -21,7 +21,7 @@ public class _1181 {
             @Override
             public int compare(String o1, String o2) {
                 if(o1.length()!=o2.length()){
-                    return o1.length()-o2.length();//이게 양수면 두번째 문자열이 길이가 더길다. 즉, 더 위에 와야한다
+                    return o1.length()-o2.length();//이게 양수면 두번째 문자열이 길이가 더길다. 즉, 더 뒤에 와야한다
                 }
                 return o1.compareTo(o2);
 

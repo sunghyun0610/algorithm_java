@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sorting/_11650_2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sorting/_1181.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sorting/_10867.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/sorting/_11651.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/_2750II.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/_2750II.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sorting/_1181.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/_1181.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,8 +77,10 @@
     "Application._10828.executor": "Run",
     "Application._10845.executor": "Run",
     "Application._10866.executor": "Run",
+    "Application._10867.executor": "Run",
     "Application._10989.executor": "Run",
     "Application._11650_2.executor": "Run",
+    "Application._11651.executor": "Run",
     "Application._11724.executor": "Run",
     "Application._1181.executor": "Run",
     "Application._1260.executor": "Run",
@@ -161,7 +163,8 @@
       <workItem from="1722905172791" duration="30014000" />
       <workItem from="1723013533510" duration="124000" />
       <workItem from="1723013662637" duration="47000" />
-      <workItem from="1723013713517" duration="12423000" />
+      <workItem from="1723013713517" duration="13847000" />
+      <workItem from="1723080869975" duration="2044000" />
     </task>
     <servers />
   </component>
