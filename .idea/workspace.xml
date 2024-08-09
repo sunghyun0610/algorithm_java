@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/sorting/_10867.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/sorting/_11651.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sorting/_1181.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sorting/_1181.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graph/_1012.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/graph/_1012.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,8 +70,10 @@
     "Application.Testt.executor": "Run",
     "Application.UDPClient.executor": "Run",
     "Application._1.executor": "Run",
+    "Application._1012.executor": "Run",
     "Application._1026.executor": "Run",
     "Application._10815.executor": "Run",
+    "Application._10816.executor": "Run",
     "Application._10828.executor": "Run",
     "Application._10845.executor": "Run",
     "Application._10866.executor": "Run",
@@ -164,7 +164,9 @@
       <workItem from="1723013533510" duration="124000" />
       <workItem from="1723013662637" duration="47000" />
       <workItem from="1723013713517" duration="13847000" />
-      <workItem from="1723080869975" duration="2044000" />
+      <workItem from="1723080869975" duration="6905000" />
+      <workItem from="1723163926883" duration="2500000" />
+      <workItem from="1723169671653" duration="12514000" />
     </task>
     <servers />
   </component>
@@ -189,11 +191,20 @@
           <properties class="java.lang.NullPointerException" package="java.lang" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="4" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/algorithm_java$_10816.ic" NAME="_10816 Coverage Results" MODIFIED="1723095180404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>search.*</FILTER>
+    </SUITE>
   </component>
 </project>
