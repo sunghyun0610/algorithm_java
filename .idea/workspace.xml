@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/search/dfs/_2667.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/dfs/_4963.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,6 +90,7 @@
     "Application._2667.executor": "Run",
     "Application._2750II.executor": "Run",
     "Application._2751.executor": "Run",
+    "Application._4963.executor": "Run",
     "Application._5215.executor": "Run",
     "Application._부분집합.executor": "Run",
     "Application._순열.executor": "Run",
@@ -167,7 +168,8 @@
       <workItem from="1723013713517" duration="13847000" />
       <workItem from="1723080869975" duration="6905000" />
       <workItem from="1723163926883" duration="2500000" />
-      <workItem from="1723169671653" duration="15450000" />
+      <workItem from="1723169671653" duration="21199000" />
+      <workItem from="1723383762013" duration="2369000" />
     </task>
     <servers />
   </component>
