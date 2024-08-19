@@ -18,7 +18,7 @@ public class _1874 {
         StringBuilder sb = new StringBuilder();
         int i=1;
         while(j<n){
-            if(!stackInt.isEmpty() && stackInt.peek()==num[j]){ //왜 num[j]ww지?
+            if(!stackInt.isEmpty() && stackInt.peek()==num[j]){ //왜 num[j]지?
                 stackInt.pop();
                 sb.append("-\n");
                 j++;
