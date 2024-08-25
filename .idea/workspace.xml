@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/implementation/_2609.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/backtracking/_14889.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/backtracking/_15649.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +89,8 @@
     "Application._1260.executor": "Run",
     "Application._1289.executor": "Run",
     "Application._1406.executor": "Run",
+    "Application._14889.executor": "Run",
+    "Application._15649.executor": "Run",
     "Application._1874_2.executor": "Run",
     "Application._1920.executor": "Run",
     "Application._1929.executor": "Run",
@@ -184,7 +187,7 @@
       <workItem from="1724049111998" duration="5367000" />
       <workItem from="1724154763601" duration="10330000" />
       <workItem from="1724371927642" duration="1865000" />
-      <workItem from="1724390492525" duration="576000" />
+      <workItem from="1724390492525" duration="26873000" />
     </task>
     <servers />
   </component>
