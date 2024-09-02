@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/search/backtracking/_15686.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/backtracking/_15686_2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/implementation/_2485.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/search/recursion/_17478.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,11 +92,13 @@
     "Application._14889.executor": "Run",
     "Application._15649.executor": "Run",
     "Application._15686_2.executor": "Run",
+    "Application._17478.executor": "Run",
     "Application._1874_2.executor": "Run",
     "Application._1920.executor": "Run",
     "Application._1929.executor": "Run",
     "Application._1966.executor": "Run",
     "Application._1978.executor": "Run",
+    "Application._2485.executor": "Run",
     "Application._2609.executor": "Run",
     "Application._2667.executor": "Run",
     "Application._2750II.executor": "Run",
@@ -189,7 +191,8 @@
       <workItem from="1724154763601" duration="10330000" />
       <workItem from="1724371927642" duration="1865000" />
       <workItem from="1724390492525" duration="28860000" />
-      <workItem from="1724805207458" duration="5169000" />
+      <workItem from="1724805207458" duration="11466000" />
+      <workItem from="1724996319671" duration="6309000" />
     </task>
     <servers />
   </component>
@@ -218,6 +221,16 @@
           <properties class="java.lang.ArrayIndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="4" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/implementation/_2485.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/implementation/_2485.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
