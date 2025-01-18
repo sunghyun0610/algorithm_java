@@ -5,35 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f27ca7f-e02a-4ad3-a0da-c31797c57159" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DP/_2775.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DP/_9095.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chatServer/MultiChattingClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chatServer/MultiChattingServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tcp/TCPClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tcp/TCPServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/udp/UDPClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/BookManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/BookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/IBookManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/ISBNNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/Magazine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws/QuantityException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/BookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/BookValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/IBookManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/III_BookManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/ISBNNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/Magazine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws3/QuantityException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/Book.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/BookManagerImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/BookTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/IBookManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/ISBNNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/Magazine.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ws_save/QuantityException.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,6 +106,7 @@
     "Application._4963.executor": "Run",
     "Application._5215.executor": "Run",
     "Application._9012.executor": "Run",
+    "Application._9095.executor": "Run",
     "Application._부분집합.executor": "Run",
     "Application._순열.executor": "Run",
     "Application._조합.executor": "Run",
@@ -227,6 +201,7 @@
       <workItem from="1728803224031" duration="483000" />
       <workItem from="1737113299761" duration="1472000" />
       <workItem from="1737117554694" duration="6349000" />
+      <workItem from="1737201714329" duration="2118000" />
     </task>
     <servers />
   </component>
