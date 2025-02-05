@@ -1,7 +1,7 @@
 class Solution {
     public int solution(int num) {
         int answer = 0;//몇번하는지 횟수
-        double tmp = num;
+        long tmp = num;
         while(tmp!=1){
             if(tmp%2==0){
                 tmp=tmp/2;
