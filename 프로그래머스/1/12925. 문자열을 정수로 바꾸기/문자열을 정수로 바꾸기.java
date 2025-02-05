@@ -1,25 +1,24 @@
 class Solution {
     public int solution(String s) {
         int answer = 0;
-        boolean minus= false;
-        int length = s.length();
-        for(int i=0;i<length;i++){
-            char ch = s.charAt(i);
-            int tmp = length - i-1;
-            if(ch == '-'){
-                minus = true;
-            }
-            else if(ch == '+'){
-                minus = false;
-            }
-            else{
-                answer+= Character.getNumericValue(ch) * Math.pow(10,tmp);
-            }
+        int len = s.length();
+        boolean bool =false;//true면 - 라는 것
+        int idx=0;
+        if(s.charAt(0)=='-'){
+            bool=true;
+            idx++;
         }
-        if(minus == true){
-            answer *=-1;
+        if(s.charAt(0)=='+'){
+            idx++;
         }
-        
+        while(idx<len){
+            
+            int tmp = Character.getNumericValue(s.charAt(idx));
+            answer += tmp * (int)(Math.pow(10,len-idx-1));
+            idx++;
+            
+        }
+        if(bool==true) answer*=-1;
         return answer;
     }
 }
