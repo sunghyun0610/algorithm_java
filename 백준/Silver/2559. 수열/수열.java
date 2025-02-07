@@ -1,5 +1,4 @@
 
-
 import java.util.Scanner;
 
 public class Main {
@@ -13,15 +12,15 @@ public class Main {
         for(int i=0;i<N;i++){
             tem[i] = sc.nextInt();
         }//온도 입력받기 완료
+        int currentTem =0;
         for(int i=0; i<K;i++){
-            maxTem += tem[i];
+            currentTem += tem[i];
         }
-        int last=maxTem;
-        for(int i=0;i<N-K;i++){
-          int tmp = last-tem[i] +tem[i+K];
-          last=tmp;
+        maxTem=currentTem;
+        for(int i=K;i<N;i++){
+          currentTem= currentTem-tem[i-K] +tem[i];
 
-          if(tmp>maxTem) maxTem=tmp;
+          if(currentTem>maxTem) maxTem=currentTem;
         }
         System.out.println(maxTem);
 
