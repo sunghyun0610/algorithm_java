@@ -16,10 +16,9 @@ public class Main {
             price[i] = sc.nextInt();
         }
 
-        int answer=0;
-        answer+= price[0]*len[0];
+        long answer=0;
 
-        int i=1;
+        int i=0;
         while(i<N-1){
             int tmp=0;
             int tmpPrice=price[i];
@@ -29,6 +28,7 @@ public class Main {
             }
             i+=tmp;
         }
+        //현재 기름이 다음 칸까지는 갈수있어야함
 
         System.out.println(answer);
 
