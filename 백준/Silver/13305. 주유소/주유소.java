@@ -21,7 +21,7 @@ public class Main {
         int i=0;
         while(i<N-1){
             int tmp=0;
-            int tmpPrice=price[i];
+            long tmpPrice=price[i];
             while((i+tmp)<N-1 && tmpPrice<=price[i+tmp]){
                 answer+=tmpPrice*len[i+tmp];
                 tmp++;
