@@ -8,11 +8,7 @@ class Solution {
             int a =commands[i][0];
             int j =commands[i][1];
             int k =commands[i][2];
-            int len=j-a+1;
-            int [] tmpArr = new int[len];
-            for(int l=0;l<len;l++){
-                tmpArr[l] = array[a+l-1];
-            }
+            int [] tmpArr = Arrays.copyOfRange(array,a-1,j);
             Arrays.sort(tmpArr);
             answer[i]= tmpArr[k-1];
         }
