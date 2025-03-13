@@ -10,18 +10,18 @@ class Solution {
         
         int start =0;
         int end = len-1;
-        while(start<=end){
+        while(start<end){
             if(people[start]+people[end]<=limit){
-                start++;
+                start++;//두명 태울수 있냐 없냐 판단
                 
             }
-                end--;
-                answer++;
+                end--;//두명 태우든 못태우든 중량 감소
+                
             
         }
      
 
-        return answer;
+        return len-start;
     }
 }
 //구명보트 최대 2명탑승 + 무게제한
