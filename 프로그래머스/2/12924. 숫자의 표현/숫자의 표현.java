@@ -3,29 +3,24 @@ class Solution {
         int answer = 0;
         int start =1;
         int end =1;
-        int sum =0;
+        int sum =1;
         int cnt=0;
-        while(start!=n){
-            for(int i=start;i<=end;i++){
-                sum+=i;
-            }
+        while(start<=n){
             if(sum<n){
                 end++;
-                sum=0;
+                sum+=end;
             }
             else if(sum==n){
-                start+=1;
-                end=start;
                 cnt++;
-                sum=0;
+                sum-=start;
+                start++;
             }
             else{
-                start+=1;
-                end=start;
-                sum=0;
+                sum-=start;
+                start++;
             }
         }
-        answer=cnt+1;
+        answer=cnt;
         return answer;
     }
 }
