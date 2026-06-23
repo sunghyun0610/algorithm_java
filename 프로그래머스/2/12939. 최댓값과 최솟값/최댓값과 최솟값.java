@@ -1,33 +1,21 @@
+import java.util.*;
 class Solution {
     public String solution(String s) {
-        StringBuilder answer = new StringBuilder();
-        int len = s.length();
-        String[] str = s.split(" ");//띄어쓰기로 나눠서 저장
-     
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-        int num =0;
-        for(int i=0;i<str.length;i++){
-            String tmp = str[i];
-            
-            if(tmp.charAt(0)=='-'){//음수인 경우
-                num = Integer.parseInt(tmp);
-                
-            }
-            else{
-                num = Integer.parseInt(tmp);
-            }
-            
-            if(num>max){
-                max=num;
-            }
-            if(num<min){
-                min=num;
-            }
-        }
-        answer.append(min+" ");
-        answer.append(max);
         
+        StringBuilder answer = new StringBuilder();
+        long max =Long.MIN_VALUE;
+        long min = Long.MAX_VALUE;
+        StringTokenizer st = new StringTokenizer(s, " ");
+        while(st.hasMoreTokens()){
+            long temp = Long.parseLong(st.nextToken());
+            if(temp>max) max=temp;
+            if(temp<min) min=temp;
+            System.out.println("max: " +max);
+            System.out.println("min :"+ min);
+        }
+        answer.append(min);
+        answer.append(" ");
+        answer.append(max);
         return answer.toString();
     }
 }
