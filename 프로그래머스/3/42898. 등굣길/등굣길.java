@@ -1,34 +1,47 @@
 class Solution {
     public int solution(int m, int n, int[][] puddles) {
         int answer = 0;
-        int dis=0;
-        int[][] DP= new int[n][m];
-        int [][] map = new int[n][m];
+        int [][] maps = new int[n+1][m+1];//인덱스랑 좌표값 맞춰주기위해 +1
+        boolean [][] puddle = new boolean[n+1][m+1];
         for(int i=0;i<puddles.length;i++){
-            int x = puddles[i][0]-1;
-            int y = puddles[i][1]-1;
-            map[y][x]=1;
+            int x = puddles[i][0];
+            int y = puddles[i][1];
+            puddle[y][x] = true;//웅덩이라는 뜻
         }
-        int [] dx ={0,1};
-        int[] dy={1,0};
-        DP[0][0]=1;
-        //오른쪽 or 아래 2방향으로만 움직일 수 있다.
-        for(int i=0;i<n;i++){//행
-            for(int j=0;j<m;j++){//열
-                for(int k=0;k<2;k++){
-                    int next_x = i+dx[k];//행
-                    int next_y= j+dy[k];
-                    if(next_x<n &&next_y<m && map[next_x][next_y]!=1){
-                        DP[next_x][next_y] = (DP[i][j] + DP[next_x][next_y]) % 1000000007;
-                        
+        maps[1][1]=1;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+                if(puddle[i][j]) {
+                    maps[i][j]=0;
+                    continue;
+                }
+                if(i==1&&j==1) continue;
+                if(j==1){ //맨 옆줄임
+                    maps[i][j]=maps[i-1][j];
+                }
+                else if(i==1){
+                    maps[i][j] = maps[i][j-1]; // 유지
+                }
+                else{
+                    if(puddle[i][j-1] && !puddle[i-1][j]){
+                        maps[i][j] = maps[i-1][j];
+                    }
+                    else if(!puddle[i][j-1] && puddle[i-1][j]){
+                        maps[i][j] = maps[i][j-1];
+                    }else{
+                        maps[i][j] = (maps[i][j-1] + maps[i-1][j]) % 1000000007;
                     }
                 }
-             }
-        }
-
-        answer=DP[n-1][m-1];
         
+                
+            }
+        }
+//         for(int[] k :maps){
+            
+//                 System.out.println(k[4]);
+            
+//         }
+        answer = maps[n][m];
         return answer;
     }
 }
-//목표지점까지의 최단거리 경로 개수 == 더 작은 단위의 소목표지점 최단거리 + 소목표지점 최단거리
