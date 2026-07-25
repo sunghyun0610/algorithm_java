@@ -29,15 +29,12 @@ class Solution {
             int cnt=0;
             for(int i=0;i<stones.length;i++){
                 if(stones[i]<point){
-                    while(i<stones.length&&stones[i]<point){
-                        cnt++;
-                        i++;
-                    }
-                    if(cnt>=k){
-                        return false;
-                    }
+                   cnt++;
+                }
+                else{
                     cnt=0;
                 }
+                if(cnt>=k) return false;
             }
         return true;
     }
