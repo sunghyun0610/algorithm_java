@@ -20,7 +20,6 @@ class Solution {
     public static int bfs(int [][] maps, int startX, int startY, int endX, int endY){
         Queue<Point> queue = new LinkedList<>();
         Queue<Integer> cntQueue = new LinkedList<>();
-  
         cntQueue.add(1);
         int row = maps.length;// 행
         int col = maps[0].length;//열
@@ -31,6 +30,7 @@ class Solution {
             int currX= currPoint.x;
             int currY= currPoint.y;
             int cnt = cntQueue.poll();
+            //visited[currX][currY] =true;
             if(currX==endX && currY == endY){
                 return cnt;
             }
