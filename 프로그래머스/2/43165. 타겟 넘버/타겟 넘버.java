@@ -1,24 +1,22 @@
 class Solution {
-    static int count;
+    static int cnt;
     public int solution(int[] numbers, int target) {
         int answer = 0;
-        count =0;
-        dfs(numbers,target,0,0);
-        answer =count ;
+        cnt=0;
+        recur(0,numbers,target,0);
+        answer=cnt;
         return answer;
     }
-    static void dfs(int [] numbers,int target, int sum, int index){
-        int len = numbers.length;
-        if(index == len){
-            // System.out.println("sum : "+sum);
-            if(target == sum){
-                count++;
-                return;
-            }
+    static void recur(int index, int[] numbers, int target, int sum){
+        if(index==numbers.length && target == sum){
+            cnt++;
             return;
         }
-        dfs(numbers, target, sum+numbers[index], index+1);
-        dfs(numbers,target, sum-numbers[index], index+1);
-        
+        if(index==numbers.length) return;
+        //-로 더하거나
+        recur(index+1,numbers,target,sum-numbers[index]);
+        //+로 더하거나
+        recur(index+1,numbers,target,sum+numbers[index]);
     }
 }
+//사용한 숫자를 다 써야함
