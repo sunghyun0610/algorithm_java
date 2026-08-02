@@ -1,26 +1,22 @@
 class Solution {
-    static boolean[] visited;
     public int solution(int n, int[][] computers) {
         int answer = 0;
-        int len = computers.length;
-        visited = new boolean[len];
-        for(int i=0;i<len;i++){
-            if(visited[i]) continue;
-            else{
-                dfs(i, computers);
+        boolean[] visited = new boolean[n];
+        for(int i=0;i<n;i++){
+            if(!visited[i]){
                 answer++;
+                dfs(i,computers,visited);
             }
         }
         return answer;
     }
-    public static void dfs(int num, int[][] computers){
-        visited[num] = true;
-        for(int i=0;i<computers[num].length;i++){
-            if(computers[num][i]==1 && !visited[i]){
-                dfs(i,computers);
+    static void dfs(int num, int[][] computers, boolean[] visited){
+        visited[num]=true;
+        int [] linkArr = computers[num];
+        for(int i=0; i<linkArr.length;i++){
+            if(!visited[i] && linkArr[i]==1){
+                dfs(i,computers,visited);
             }
         }
     }
 }
-//유니온파인드?
-// 전체 네트워크 개수를 구하는 문제니까 dfs?
