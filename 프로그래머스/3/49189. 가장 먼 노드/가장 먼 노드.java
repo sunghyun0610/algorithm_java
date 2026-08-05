@@ -48,12 +48,12 @@ class Solution {
     static void bfs(int start, List<Integer>[] graph, boolean[] visited){
 
         Queue<Integer> queue = new LinkedList<>();
-        Queue<Integer> queueLen = new LinkedList<>();
+
 
         visited[start] = true;
 
         queue.add(start);
-        queueLen.add(0);
+
 
         int cnt=0;
 
@@ -62,7 +62,7 @@ class Solution {
             cnt=0;
 
             int currNode = queue.poll();
-            int currLen = queueLen.poll();
+
 
             List<Integer> temp = graph[currNode];
 
@@ -73,8 +73,8 @@ class Solution {
                 if(!visited[nextNode]){//방문한적이 없으면
                     visited[nextNode] = true;
                     queue.add(nextNode);
-                    queueLen.add(currLen+1);
-                    lenArr[nextNode] = currLen+1;
+     
+                    lenArr[nextNode] = lenArr[currNode]+1;
                 }
 
             }
