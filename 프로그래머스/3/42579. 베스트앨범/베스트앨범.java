@@ -3,7 +3,7 @@ import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.List;
 import java.util.ArrayList;
-
+import java.util.*;
 class Solution {
     class Song{
         int playCnt;//재생횟수
@@ -48,9 +48,9 @@ class Solution {
             tempGenreSong.sort(
                 (a,b)->{
                     if(a.playCnt!=b.playCnt){
-                        return b.playCnt - a.playCnt;
+                        return Integer.compare(b.playCnt , a.playCnt);
                     }
-                    return a.songNum - b.songNum;
+                    return Integer.compare(a.songNum ,b.songNum);
                 }
             );//list 정렬 완료됨
             // for(Song l:tempGenreSong){
