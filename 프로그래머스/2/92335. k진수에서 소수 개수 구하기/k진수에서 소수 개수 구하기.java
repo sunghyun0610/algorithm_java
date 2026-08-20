@@ -2,14 +2,7 @@ class Solution {
     public int solution(int n, int k) {
         int answer = 0;
         int temp = n;
-        StringBuilder sb = new StringBuilder();
-        while(temp>=1){
-            sb.append(temp%k);
-            temp/=k;
-        }
-        sb.reverse();
-        System.out.println(sb.toString());//진법 변환 완료
-        String transferNum = sb.toString();
+        String transferNum = Integer.toString(n,k);
         int idx = 0;
         int len = transferNum.length();
         while(idx<len){
