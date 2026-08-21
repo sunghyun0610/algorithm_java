@@ -1,188 +1,102 @@
 import java.util.*;
-
 class Solution {
-
-    static int[] dx = {-1, 1, 0, 0};
-    static int[] dy = {0, 0, -1, 1};
-
-    static int n, m;
-    static int answer;
-
-    static int redEndX, redEndY;
-    static int blueEndX, blueEndY;
-
-    static boolean[][] redVisited;
-    static boolean[][] blueVisited;
-
-    public int solution(int[][] maze) {
-
-        n = maze.length;
-        m = maze[0].length;
-
-        int redX = 0, redY = 0;
-        int blueX = 0, blueY = 0;
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-
-                if (maze[i][j] == 1) {
-                    redX = i;
-                    redY = j;
-                }
-                else if (maze[i][j] == 2) {
-                    blueX = i;
-                    blueY = j;
-                }
-                else if (maze[i][j] == 3) {
-                    redEndX = i;
-                    redEndY = j;
-                }
-                else if (maze[i][j] == 4) {
-                    blueEndX = i;
-                    blueEndY = j;
-                }
-            }
+    private static class Point{
+        int x,y;
+        
+        Point(int x,int y){
+            this.x = x;
+            this.y = y;
         }
-
-        redVisited = new boolean[n][m];
-        blueVisited = new boolean[n][m];
-
-        redVisited[redX][redY] = true;
-        blueVisited[blueX][blueY] = true;
-
-        answer = Integer.MAX_VALUE;
-
-        dfs(
-            redX, redY,
-            blueX, blueY,
-            maze,
-            0
-        );
-
-        return answer == Integer.MAX_VALUE ? 0 : answer;
     }
+    private static final int MAX = 999999;
+    
+    public int[][] map;
+    private boolean redEnd, blueEnd;
+    private int[] dx = {-1,1,0,0};
+    private int[] dy = {0,0,-1,1};
+    private boolean[][][] visited;
+    
+    public int solution(int[][] maze) {
+        Point cntRed = null;
+        Point cntBlue = null;
 
-    static void dfs(
-        int redX, int redY,
-        int blueX, int blueY,
-        int[][] maze,
-        int count
-    ) {
-
-        // 둘 다 도착
-        if (redX == redEndX && redY == redEndY &&
-            blueX == blueEndX && blueY == blueEndY) {
-
-            answer = Math.min(answer, count);
-            return;
-        }
-
-        // 이미 찾은 최솟값보다 같거나 많이 이동했다면 중단
-        if (count >= answer) {
-            return;
-        }
-
-        // 빨강이 도착했는지
-        boolean redDone =
-            redX == redEndX && redY == redEndY;
-
-        // 파랑이 도착했는지
-        boolean blueDone =
-            blueX == blueEndX && blueY == blueEndY;
-
-        // 빨강 이동
-        for (int rd = 0; rd < 4; rd++) {
-
-            int nextRedX = redX;
-            int nextRedY = redY;
-
-            if (!redDone) {
-                nextRedX = redX + dx[rd];
-                nextRedY = redY + dy[rd];
-
-                // 범위
-                if (nextRedX < 0 || nextRedX >= n ||
-                    nextRedY < 0 || nextRedY >= m) {
-                    continue;
-                }
-
-                // 벽
-                if (maze[nextRedX][nextRedY] == 5) {
-                    continue;
-                }
-
-                // 빨강이 이미 방문했던 칸
-                if (redVisited[nextRedX][nextRedY]) {
-                    continue;
-                }
-            }
-
-            // 파랑 이동
-            for (int bd = 0; bd < 4; bd++) {
-
-                int nextBlueX = blueX;
-                int nextBlueY = blueY;
-
-                if (!blueDone) {
-                    nextBlueX = blueX + dx[bd];
-                    nextBlueY = blueY + dy[bd];
-
-                    // 범위
-                    if (nextBlueX < 0 || nextBlueX >= n ||
-                        nextBlueY < 0 || nextBlueY >= m) {
-                        continue;
-                    }
-
-                    // 벽
-                    if (maze[nextBlueX][nextBlueY] == 5) {
-                        continue;
-                    }
-
-                    // 파랑이 이미 방문했던 칸
-                    if (blueVisited[nextBlueX][nextBlueY]) {
-                        continue;
-                    }
-                }
-
-                // 같은 칸으로 이동
-                if (nextRedX == nextBlueX &&
-                    nextRedY == nextBlueY) {
-                    continue;
-                }
-
-                // 서로의 현재 위치로 이동 (swap)
-                if (nextRedX == blueX &&
-                    nextRedY == blueY &&
-                    nextBlueX == redX &&
-                    nextBlueY == redY) {
-                    continue;
-                }
-
-                // 방문 처리
-                if (!redDone) {
-                    redVisited[nextRedX][nextRedY] = true;
-                }
-
-                if (!blueDone) {
-                    blueVisited[nextBlueX][nextBlueY] = true;
-                }
-
-                dfs(
-                    nextRedX, nextRedY,
-                    nextBlueX, nextBlueY,
-                    maze,
-                    count + 1
-                );
-
-                // 백트래킹
-                if (!redDone) {
-                    redVisited[nextRedX][nextRedY] = false;
-                }
-
-                if (!blueDone) {
-                    blueVisited[nextBlueX][nextBlueY] = false;
-                }
+        map = new int[maze.length][maze[0].length];
+        visited = new boolean[maze.length][maze[0].length][2];
+        
+        for(int i = 0; i < maze.length; i++){
+            for(int j = 0; j < maze[i].length; j++){
+                map[i][j] = maze[i][j];
+                // 각 수레의 시작위치 초기화
+                if(maze[i][j] == 1) cntRed = new Point(i,j);
+                else if(maze[i][j] == 2) cntBlue = new Point(i,j);
             }
         }
+        // 시작 위치 방문 처리 (0은 빨간 수레, 1은 파란 수레)
+        visited[cntRed.x][cntRed.y][0] = true;
+        visited[cntBlue.x][cntBlue.y][1] = true;
+        int answer = backtracking(cntRed,cntBlue,0);
+        return (answer == MAX)? 0 : answer;
+    }
+	
+    // 해당 방향으로 움직임 반환
+    private Point getNext(int x, int y, int dir){
+        int nx = x + dx[dir];
+        int ny = y + dy[dir];
+        return new Point(nx,ny);
+    }
+    
+    // 해당 방향으로 움직이는 것이 가능한지 판단
+    // (현재 빨간 수레 , 다음 빨간 수레, 현재 파란 수레, 다음 파란 수레)
+    private boolean isPossible(Point cntRed, Point red, 
+                               Point cntBlue, Point blue){
+        // 기본 탐색 규칙
+        if(red.x < 0 || red.y < 0 || red.x >= map.length || red.y >= map[0].length
+          || blue.x < 0 || blue.y < 0 || blue.x >= map.length || blue.y >= map[0].length
+          || map[red.x][red.y] == 5 || map[blue.x][blue.y] == 5) return false;
+        
+        // 두 수레 스위치 체크
+        if((cntRed.x == blue.x && cntRed.y == blue.y)
+          && (cntBlue.x == red.x && cntBlue.y == red.y)) return false;
+        
+        // 도착지점에 도착하지도 않고 중복방문이라면 false
+        if((!redEnd && visited[red.x][red.y][0])
+           || (!blueEnd && visited[blue.x][blue.y][1])) return false;
+        
+        // 두 수레가 동일한 지점에 위치시 
+        if(red.x == blue.x && red.y == blue.y) return false;
+        return true;
+    }
+    
+    // 백트래킹
+    private int backtracking(Point red, Point blue, int result){
+    	// 두 수레가 모두 도착 시 result 반환
+        if(redEnd && blueEnd) return result;
+        int answer = MAX;
+        
+        // 2중 for문으로 16가지 경우의 수
+        for(int i = 0; i < 4; i++){
+            for(int j = 0; j < 4; j++){
+            	// 도착지점에 도착한 경우엔 움직이지 않음
+                Point nRed = (!redEnd) ? getNext(red.x,red.y,i) : red;
+                Point nBlue = (!blueEnd) ? getNext(blue.x,blue.y,j) : blue;
+                
+                // 불가능한 경우 conitnue
+                if(!isPossible(red,nRed,blue,nBlue)) continue;
+                visited[nRed.x][nRed.y][0] = true;
+                visited[nBlue.x][nBlue.y][1] = true;
+                if(map[nRed.x][nRed.y] == 3) redEnd = true;
+                if(map[nBlue.x][nBlue.y] == 4) blueEnd = true;
+                
+                // 가장 적게 걸리는 턴 수
+                answer = Math.min(answer,backtracking(nRed,nBlue,result+1));
+                
+                // 방문 기록 및 도착 기록 초기화
+                redEnd = false;
+                blueEnd = false;
+                visited[nRed.x][nRed.y][0] = false;
+                visited[nBlue.x][nBlue.y][1] = false;
+            }
+        }
+        return answer;
     }
 }
