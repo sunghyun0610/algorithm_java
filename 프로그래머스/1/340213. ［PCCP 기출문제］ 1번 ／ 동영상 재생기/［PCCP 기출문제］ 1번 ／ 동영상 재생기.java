@@ -37,9 +37,7 @@ class Solution {
                     else{ // 10초 줄이기
                         currTime-=10;
                     }
-                 if(currTime>=videoOpStartTime && currTime <=videoOpEndTime){
-                currTime = videoOpEndTime;
-            }
+                 
         }
             else if(command.equals("next")){
                     if(currTime+10>=videoEndTime){
@@ -47,10 +45,10 @@ class Solution {
                     }else{
                         currTime += 10;
                     }
-            if(currTime>=videoOpStartTime && currTime <=videoOpEndTime){
-                currTime = videoOpEndTime;
-            }
             
+            }
+             if(currTime>=videoOpStartTime && currTime <=videoOpEndTime){
+                currTime = videoOpEndTime;
             }
         }
         
