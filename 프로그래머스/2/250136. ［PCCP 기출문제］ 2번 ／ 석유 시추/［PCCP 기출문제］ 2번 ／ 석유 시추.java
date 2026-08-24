@@ -1,74 +1,97 @@
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Set;
+import java.util.HashSet;
 import java.util.*;
+
 class Solution {
-    static int[] dx = {1,-1,0,0};
-    static int[] dy = {0,0,1,-1};
-    static int max = 0;
-    static class Node{
+    static class Point{
         int x;
         int y;
-        Node(int x,int y){
+        Point(int x, int y){
             this.x=x;
             this.y=y;
         }
     }
+    private static int[] dx = {-1,1,0,0};
+    private static int[] dy = {0,0,-1,1};
+    // static int oilSum;
     public int solution(int[][] land) {
         int answer = 0;
         int row = land.length;
-        int col = land[0].length;//시추관 개수
+        int col = land[0].length;//열 개수
+        Map<Integer,Integer> map = new HashMap<>();// 시추관 : 석유개수
+     
         boolean[][] visited = new boolean[row][col];
-        Map<Integer,Integer> pipeMap = new HashMap<>();
-        for(int i=0;i<col;i++){
-            pipeMap.put(i,0);// i번째 파이프에 석유카운트한거
-        }
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
                 if(land[i][j]==1 && !visited[i][j]){
-                    visited[i][j] = true;
-                    bfs(new Node(i,j),land,visited,pipeMap);
+                    int oilSum=1;
+                    Set<Integer> colSet = new HashSet<>();
+                    colSet.add(j);
+                    oilSum = bfs(i,j,land,visited,colSet);
+                    // System.out.println(oilSum);
+                    for(int k : colSet){
+                        // System.out.println("해당된 열 set : ")
+                        map.put(k,map.getOrDefault(k,0)+oilSum);
+                    }
                 }
             }
         }
-        for(int k:pipeMap.keySet()){
-            int value = pipeMap.get(k);
-            answer = Math.max(answer,value);
+        if(map.size()==0) return 0;
+        for(int key : map.keySet()){
+            int oil = map.get(key);
+            // System.out.println("석유관 col : "+key + " oil양 : "+oil);
+            answer = Math.max(answer,oil);
         }
+        
         return answer;
     }
-    
-    static int bfs(Node startNode, int[][]land, boolean[][] visited, 
-                   Map<Integer,Integer> pipeMap){
-        int sum=1;
-        Set<Integer> usedPipe = new HashSet<>();
-        Queue<Node> queue = new LinkedList<>();
-        queue.add(startNode);
+    static int bfs(int x, int y, int[][] land, boolean[][] visited, Set<Integer> colSet){
+        visited[x][y] = true;
         int row = land.length;
-        int col = land[0].length;//시추관 개수
+        int col = land[0].length;//열 개수
+        Queue<Point> queue = new LinkedList<>();
+        queue.add(new Point(x,y));
+        int cnt=1;
         while(!queue.isEmpty()){
-            Node currNode = queue.poll();
-            int startX = currNode.x;
-            int startY = currNode.y;
-            usedPipe.add(startY);
+            Point currPoint = queue.poll();
+            int currX = currPoint.x;
+            int currY = currPoint.y;
             for(int i=0;i<4;i++){
-                int nextX = startX + dx[i];
-                int nextY = startY + dy[i];
-                if(nextX>=0 && nextX<row && nextY>=0 && nextY<col&&
-               !visited[nextX][nextY] && land[nextX][nextY]==1){
-                    sum++;
-                    queue.add(new Node(nextX,nextY));
-                    visited[nextX][nextY] = true;
+                int nextX = currX + dx[i];
+                int nextY = currY + dy[i];
+                  if(nextX>=0 && nextX<row && nextY>=0&& nextY<col&&
+              land[nextX][nextY]==1 && !visited[nextX][nextY]){
+                      visited[nextX][nextY] = true;
+                      queue.add(new Point(nextX, nextY));
+                      cnt++;
+                      colSet.add(nextY);
+                  }
             }
         }
+        return cnt;
     }
-        for(int k : usedPipe){
-            pipeMap.put(k,pipeMap.get(k)+sum);
-            // System.out.println("속한 key : "+k);
-        }
-        return sum;
-}
     
+//     static int dfs(int x, int y, int[][] land, boolean[][] visited, Set<Integer> colSet){
+//         visited[x][y] = true;
+//         int row = land.length;
+//         int col = land[0].length;//열 개수
+//         int sum = 1;
+//         for(int i=0;i<4;i++){
+//             int nextX = x+dx[i];
+//             int nextY = y+dy[i];
+//             if(nextX>=0 && nextX<row && nextY>=0&& nextY<col&&
+//               land[nextX][nextY]==1 && !visited[nextX][nextY]){
+//                 colSet.add(nextY);
+//                 sum+=dfs(nextX,nextY,land,visited,colSet);
+                
+//             }
+//         }
+//         return sum;
+//     }
 }
-//수직으로 뚫는다 시추관
-//dfs로 요소 개수 다 더하면 될거같은데
-//석유는 열개수만큼 시추관 설치가능
-//이게 visited되면서 길을 못찾을수가있는데?
-//dfs하면 갇혀버릴수도?
+//한 열을 뚫는 시추관
+//가장 많은 석유를 뽑을 수 있는 시추관의 위치를 찾아라
+//0이면 빈땅, 1이면 석유가 있는 땅
+//일단 석유덩어리 모두찾고 -> 해당되는 열을 기록하면되자나 Map으로 기록하면될듯?
