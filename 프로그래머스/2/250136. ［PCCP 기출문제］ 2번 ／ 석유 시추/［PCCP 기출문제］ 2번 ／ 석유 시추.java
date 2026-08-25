@@ -1,97 +1,93 @@
-import java.util.Map;
-import java.util.HashMap;
-import java.util.Set;
-import java.util.HashSet;
 import java.util.*;
 
 class Solution {
-    static class Point{
+    static int[] dx ={-1,1,0,0};
+    static int[] dy ={0,0,-1,1};
+    static int oilCnt;
+    
+    static class Node{
         int x;
         int y;
-        Point(int x, int y){
-            this.x=x;
-            this.y=y;
+        int size;
+        Node(int x, int y, int size){
+            this.x = x;
+            this.y = y;
+            this. size = size;
         }
     }
-    private static int[] dx = {-1,1,0,0};
-    private static int[] dy = {0,0,-1,1};
-    // static int oilSum;
     public int solution(int[][] land) {
         int answer = 0;
+        //모든 덩어리들을 일단 다 구함 -> 포함되는 col값도 같이 구함
+        Map<Integer, Integer> colMap = new HashMap<>();
         int row = land.length;
-        int col = land[0].length;//열 개수
-        Map<Integer,Integer> map = new HashMap<>();// 시추관 : 석유개수
-     
+        int col = land[0].length;
+        for(int i=0;i<col;i++){
+            colMap.put(i,0);
+        }// 열 : 석유개수
         boolean[][] visited = new boolean[row][col];
         for(int i=0;i<row;i++){
             for(int j=0;j<col;j++){
                 if(land[i][j]==1 && !visited[i][j]){
-                    int oilSum=1;
-                    Set<Integer> colSet = new HashSet<>();
-                    colSet.add(j);
-                    oilSum = bfs(i,j,land,visited,colSet);
-                    // System.out.println(oilSum);
-                    for(int k : colSet){
-                        // System.out.println("해당된 열 set : ")
-                        map.put(k,map.getOrDefault(k,0)+oilSum);
+                    oilCnt=0;
+                    Set<Integer> set = new HashSet<>();//포함되는 열을 담은 set
+                    set.add(j);
+                    bfs(land,visited,i,j,set);
+                    for(int k : set){
+                        colMap.put(k, colMap.get(k)+oilCnt);
                     }
                 }
             }
         }
-        if(map.size()==0) return 0;
-        for(int key : map.keySet()){
-            int oil = map.get(key);
-            // System.out.println("석유관 col : "+key + " oil양 : "+oil);
-            answer = Math.max(answer,oil);
+        for(Integer k : colMap.keySet()){
+            answer = Math.max(answer, colMap.get(k));
         }
-        
         return answer;
     }
-    static int bfs(int x, int y, int[][] land, boolean[][] visited, Set<Integer> colSet){
+    private void bfs(int[][] land, boolean[][] visited, int x, int y, 
+                             Set<Integer> set){
         visited[x][y] = true;
+        set.add(y);
         int row = land.length;
-        int col = land[0].length;//열 개수
-        Queue<Point> queue = new LinkedList<>();
-        queue.add(new Point(x,y));
-        int cnt=1;
+        int col = land[0].length;
+        Queue<Node> queue = new LinkedList<>();
+        queue.add(new Node(x,y,1));
+        oilCnt++;
         while(!queue.isEmpty()){
-            Point currPoint = queue.poll();
-            int currX = currPoint.x;
-            int currY = currPoint.y;
+            Node currNode = queue.poll();
+            int currX = currNode.x;
+            int currY = currNode.y;
+            int currSize = currNode.size;
             for(int i=0;i<4;i++){
-                int nextX = currX + dx[i];
-                int nextY = currY + dy[i];
-                  if(nextX>=0 && nextX<row && nextY>=0&& nextY<col&&
-              land[nextX][nextY]==1 && !visited[nextX][nextY]){
-                      visited[nextX][nextY] = true;
-                      queue.add(new Point(nextX, nextY));
-                      cnt++;
-                      colSet.add(nextY);
-                  }
+                int nextX = currX +dx[i];
+                int nextY = currY +dy[i];
+                if(nextX>=0 && nextX<row && nextY>=0 && nextY<col
+              &&land[nextX][nextY]==1 && !visited[nextX][nextY]){
+                    visited[nextX][nextY]=true;
+                    set.add(nextY);
+                    queue.add(new Node(nextX,nextY,currSize+1));
+                    oilCnt++;
+                }
             }
         }
-        return cnt;
+        return;
     }
     
-//     static int dfs(int x, int y, int[][] land, boolean[][] visited, Set<Integer> colSet){
-//         visited[x][y] = true;
-//         int row = land.length;
-//         int col = land[0].length;//열 개수
-//         int sum = 1;
-//         for(int i=0;i<4;i++){
-//             int nextX = x+dx[i];
-//             int nextY = y+dy[i];
-//             if(nextX>=0 && nextX<row && nextY>=0&& nextY<col&&
-//               land[nextX][nextY]==1 && !visited[nextX][nextY]){
-//                 colSet.add(nextY);
-//                 sum+=dfs(nextX,nextY,land,visited,colSet);
-                
-//             }
-//         }
-//         return sum;
-//     }
+    
+    private void findOilSize(int[][] land, boolean[][] visited, int x, int y, 
+                             Set<Integer> set){
+        visited[x][y] = true;
+        oilCnt++;
+        int row = land.length;
+        int col = land[0].length;
+        for(int i=0;i<4;i++){
+            int nextX = x+dx[i];
+            int nextY = y+dy[i];
+            if(nextX>=0 && nextX<row && nextY>=0 && nextY<col
+              &&land[nextX][nextY]==1 && !visited[nextX][nextY]){
+                visited[nextX][nextY] = true;
+                set.add(nextY);
+                findOilSize(land,visited,nextX,nextY,set);
+            }
+        }
+    }
 }
-//한 열을 뚫는 시추관
-//가장 많은 석유를 뽑을 수 있는 시추관의 위치를 찾아라
-//0이면 빈땅, 1이면 석유가 있는 땅
-//일단 석유덩어리 모두찾고 -> 해당되는 열을 기록하면되자나 Map으로 기록하면될듯?
