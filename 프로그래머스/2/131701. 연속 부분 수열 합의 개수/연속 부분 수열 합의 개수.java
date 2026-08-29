@@ -25,7 +25,7 @@ class Solution {
         // System.out.println("길이가 len인 연속 부분수열 :" +len + " 합계 : "+sum);
         resultSet.add(sum);//첫번째 계산
         start++;
-        while(start<=elementLen){
+        while(start<=elementLen-1){
             end = (len+start-1)%elementLen;
             sum-=elements[start-1];
             sum+=elements[end];
