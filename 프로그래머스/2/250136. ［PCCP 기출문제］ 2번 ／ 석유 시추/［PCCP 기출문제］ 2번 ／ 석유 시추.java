@@ -73,21 +73,21 @@ class Solution {
     }
     
     
-    private void findOilSize(int[][] land, boolean[][] visited, int x, int y, 
-                             Set<Integer> set){
-        visited[x][y] = true;
-        oilCnt++;
-        int row = land.length;
-        int col = land[0].length;
-        for(int i=0;i<4;i++){
-            int nextX = x+dx[i];
-            int nextY = y+dy[i];
-            if(nextX>=0 && nextX<row && nextY>=0 && nextY<col
-              &&land[nextX][nextY]==1 && !visited[nextX][nextY]){
-                visited[nextX][nextY] = true;
-                set.add(nextY);
-                findOilSize(land,visited,nextX,nextY,set);
-            }
-        }
-    }
+    // private void findOilSize(int[][] land, boolean[][] visited, int x, int y, 
+    //                          Set<Integer> set){
+    //     visited[x][y] = true;
+    //     oilCnt++;
+    //     int row = land.length;
+    //     int col = land[0].length;
+    //     for(int i=0;i<4;i++){
+    //         int nextX = x+dx[i];
+    //         int nextY = y+dy[i];
+    //         if(nextX>=0 && nextX<row && nextY>=0 && nextY<col
+    //           &&land[nextX][nextY]==1 && !visited[nextX][nextY]){
+    //             visited[nextX][nextY] = true;
+    //             set.add(nextY);
+    //             findOilSize(land,visited,nextX,nextY,set);
+    //         }
+    //     }
+    // }
 }
