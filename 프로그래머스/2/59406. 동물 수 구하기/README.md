@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 0.0 MB, 시간: 0.00 ms
+메모리: undefined, 시간: 
 
 ### 구분
 
@@ -12,119 +12,119 @@
 
 ### 채점결과
 
-Empty
+합계: 100.0 / 100.0
 
 ### 제출 일자
 
-2025년 05월 19일 11:08:35
+2026년 10월 06일 18:50:52
 
 ### 문제 설명
 
-<p><code>ANIMAL_INS</code> 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다. <code>ANIMAL_INS</code> 테이블 구조는 다음과 같으며, <code>ANIMAL_ID</code>, <code>ANIMAL_TYPE</code>, <code>DATETIME</code>, <code>INTAKE_CONDITION</code>, <code>NAME</code>, <code>SEX_UPON_INTAKE</code>는 각각 동물의 아이디, 생물 종, 보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</p>
-<table class="table">
-        <thead><tr>
-<th>NAME</th>
-<th>TYPE</th>
-<th>NULLABLE</th>
+<p style="user-select: auto !important;"><code style="user-select: auto !important;">ANIMAL_INS</code> 테이블은 동물 보호소에 들어온 동물의 정보를 담은 테이블입니다. <code style="user-select: auto !important;">ANIMAL_INS</code> 테이블 구조는 다음과 같으며, <code style="user-select: auto !important;">ANIMAL_ID</code>, <code style="user-select: auto !important;">ANIMAL_TYPE</code>, <code style="user-select: auto !important;">DATETIME</code>, <code style="user-select: auto !important;">INTAKE_CONDITION</code>, <code style="user-select: auto !important;">NAME</code>, <code style="user-select: auto !important;">SEX_UPON_INTAKE</code>는 각각 동물의 아이디, 생물 종, 보호 시작일, 보호 시작 시 상태, 이름, 성별 및 중성화 여부를 나타냅니다.</p>
+<table class="table" style="user-select: auto !important;">
+        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<th style="user-select: auto !important;">NAME</th>
+<th style="user-select: auto !important;">TYPE</th>
+<th style="user-select: auto !important;">NULLABLE</th>
 </tr>
 </thead>
-        <tbody><tr>
-<td>ANIMAL_ID</td>
-<td>VARCHAR(N)</td>
-<td>FALSE</td>
+        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">ANIMAL_ID</td>
+<td style="user-select: auto !important;">VARCHAR(N)</td>
+<td style="user-select: auto !important;">FALSE</td>
 </tr>
-<tr>
-<td>ANIMAL_TYPE</td>
-<td>VARCHAR(N)</td>
-<td>FALSE</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">ANIMAL_TYPE</td>
+<td style="user-select: auto !important;">VARCHAR(N)</td>
+<td style="user-select: auto !important;">FALSE</td>
 </tr>
-<tr>
-<td>DATETIME</td>
-<td>DATETIME</td>
-<td>FALSE</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">DATETIME</td>
+<td style="user-select: auto !important;">DATETIME</td>
+<td style="user-select: auto !important;">FALSE</td>
 </tr>
-<tr>
-<td>INTAKE_CONDITION</td>
-<td>VARCHAR(N)</td>
-<td>FALSE</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">INTAKE_CONDITION</td>
+<td style="user-select: auto !important;">VARCHAR(N)</td>
+<td style="user-select: auto !important;">FALSE</td>
 </tr>
-<tr>
-<td>NAME</td>
-<td>VARCHAR(N)</td>
-<td>TRUE</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">NAME</td>
+<td style="user-select: auto !important;">VARCHAR(N)</td>
+<td style="user-select: auto !important;">TRUE</td>
 </tr>
-<tr>
-<td>SEX_UPON_INTAKE</td>
-<td>VARCHAR(N)</td>
-<td>FALSE</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">SEX_UPON_INTAKE</td>
+<td style="user-select: auto !important;">VARCHAR(N)</td>
+<td style="user-select: auto !important;">FALSE</td>
 </tr>
 </tbody>
       </table>
-<p>동물 보호소에 동물이 몇 마리 들어왔는지 조회하는 SQL 문을 작성해주세요. </p>
+<p style="user-select: auto !important;">동물 보호소에 동물이 몇 마리 들어왔는지 조회하는 SQL 문을 작성해주세요. </p>
 
-<h5>예시</h5>
+<h5 style="user-select: auto !important;">예시</h5>
 
-<p>예를 들어 <code>ANIMAL_INS</code> 테이블이 다음과 같다면</p>
-<table class="table">
-        <thead><tr>
-<th>ANIMAL_ID</th>
-<th>ANIMAL_TYPE</th>
-<th>DATETIME</th>
-<th>INTAKE_CONDITION</th>
-<th>NAME</th>
-<th>SEX_UPON_INTAKE</th>
+<p style="user-select: auto !important;">예를 들어 <code style="user-select: auto !important;">ANIMAL_INS</code> 테이블이 다음과 같다면</p>
+<table class="table" style="user-select: auto !important;">
+        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<th style="user-select: auto !important;">ANIMAL_ID</th>
+<th style="user-select: auto !important;">ANIMAL_TYPE</th>
+<th style="user-select: auto !important;">DATETIME</th>
+<th style="user-select: auto !important;">INTAKE_CONDITION</th>
+<th style="user-select: auto !important;">NAME</th>
+<th style="user-select: auto !important;">SEX_UPON_INTAKE</th>
 </tr>
 </thead>
-        <tbody><tr>
-<td>A399552</td>
-<td>Dog</td>
-<td>2013-10-14 15:38:00</td>
-<td>Normal</td>
-<td>Jack</td>
-<td>Neutered Male</td>
+        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">A399552</td>
+<td style="user-select: auto !important;">Dog</td>
+<td style="user-select: auto !important;">2013-10-14 15:38:00</td>
+<td style="user-select: auto !important;">Normal</td>
+<td style="user-select: auto !important;">Jack</td>
+<td style="user-select: auto !important;">Neutered Male</td>
 </tr>
-<tr>
-<td>A379998</td>
-<td>Dog</td>
-<td>2013-10-23 11:42:00</td>
-<td>Normal</td>
-<td>Disciple</td>
-<td>Intact Male</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">A379998</td>
+<td style="user-select: auto !important;">Dog</td>
+<td style="user-select: auto !important;">2013-10-23 11:42:00</td>
+<td style="user-select: auto !important;">Normal</td>
+<td style="user-select: auto !important;">Disciple</td>
+<td style="user-select: auto !important;">Intact Male</td>
 </tr>
-<tr>
-<td>A370852</td>
-<td>Dog</td>
-<td>2013-11-03 15:04:00</td>
-<td>Normal</td>
-<td>Katie</td>
-<td>Spayed Female</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">A370852</td>
+<td style="user-select: auto !important;">Dog</td>
+<td style="user-select: auto !important;">2013-11-03 15:04:00</td>
+<td style="user-select: auto !important;">Normal</td>
+<td style="user-select: auto !important;">Katie</td>
+<td style="user-select: auto !important;">Spayed Female</td>
 </tr>
-<tr>
-<td>A403564</td>
-<td>Dog</td>
-<td>2013-11-18 17:03:00</td>
-<td>Normal</td>
-<td>Anna</td>
-<td>Spayed Female</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">A403564</td>
+<td style="user-select: auto !important;">Dog</td>
+<td style="user-select: auto !important;">2013-11-18 17:03:00</td>
+<td style="user-select: auto !important;">Normal</td>
+<td style="user-select: auto !important;">Anna</td>
+<td style="user-select: auto !important;">Spayed Female</td>
 </tr>
 </tbody>
       </table>
-<p>동물 보호소에 들어온 동물은 4마리입니다. 따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.</p>
-<table class="table">
-        <thead><tr>
-<th>count</th>
+<p style="user-select: auto !important;">동물 보호소에 들어온 동물은 4마리입니다. 따라서 SQL문을 실행하면 다음과 같이 나와야 합니다.</p>
+<table class="table" style="user-select: auto !important;">
+        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<th style="user-select: auto !important;">count</th>
 </tr>
 </thead>
-        <tbody><tr>
-<td>4</td>
+        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">4</td>
 </tr>
 </tbody>
       </table>
-<p>※ 컬럼 이름(위 예제에서는 count)은 일치하지 않아도 됩니다.</p>
+<p style="user-select: auto !important;">※ 컬럼 이름(위 예제에서는 count)은 일치하지 않아도 됩니다.</p>
 
-<hr>
+<hr style="user-select: auto !important;">
 
-<p>본 문제는 <a href="https://www.kaggle.com/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes" target="_blank" rel="noopener">Kaggle의 "Austin Animal Center Shelter Intakes and Outcomes"</a>에서 제공하는 데이터를 사용하였으며 <a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank" rel="noopener">ODbL</a>의 적용을 받습니다.</p>
+<p style="user-select: auto !important;">본 문제는 <a href="https://www.kaggle.com/aaronschlegel/austin-animal-center-shelter-intakes-and-outcomes" target="_blank" rel="noopener" style="user-select: auto !important;">Kaggle의 "Austin Animal Center Shelter Intakes and Outcomes"</a>에서 제공하는 데이터를 사용하였으며 <a href="https://opendatacommons.org/licenses/odbl/1.0/" target="_blank" rel="noopener" style="user-select: auto !important;">ODbL</a>의 적용을 받습니다.</p>
 
 
 > 출처: 프로그래머스 코딩 테스트 연습, https://school.programmers.co.kr/learn/challenges
