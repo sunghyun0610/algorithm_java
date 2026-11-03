@@ -1,33 +1,21 @@
-import java.util.*;
 class Solution {
     public int solution(int n, int[][] computers) {
         int answer = 0;
-        int row = computers.length;
-        int col = computers[0].length;
         boolean[] visited = new boolean[n];
         for(int i=0;i<n;i++){
             if(!visited[i]){
-                bfs(computers,visited,i);
+                dfs(computers,visited,i);
                 answer++;
             }
         }
         return answer;
     }
-    void bfs(int[][] computers, boolean[] visited, int node){
-        Queue<Integer> queue = new LinkedList<>();
+    void dfs(int[][] computers, boolean[] visited, int node){
         visited[node] = true;
-        queue.add(node);
-        while(!queue.isEmpty()){
-            int currNode = queue.poll();
-            for(int i=0; i<computers[currNode].length;i++){
-                int nextNode = i;
-                if(computers[currNode][nextNode]==1 && !visited[nextNode]){
-                    visited[nextNode] = true;
-                    queue.add(nextNode);
-                }
+        for(int i=0; i<computers[node].length;i++){
+            if(computers[node][i]==1 && ! visited[i]){
+                dfs(computers,visited,i);
             }
         }
-        return;
     }
 }
-//네트워크의 개수를 구하라
