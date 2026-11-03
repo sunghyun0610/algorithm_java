@@ -10,9 +10,9 @@ class Solution {
                 sum+=end;
             }
             else if(sum == n){
+                
+                sum-=start;
                 start++;
-                end=start;
-                sum=start;
                 answer++;
             }
             else{
