@@ -16,9 +16,8 @@ class Solution {
                 answer++;
             }
             else{
+                sum-=start;
                 start++;
-                end=start;
-                sum=start;
             }
         }
         return answer;
