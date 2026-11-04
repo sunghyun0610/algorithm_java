@@ -1,6 +1,6 @@
 -- 코드를 입력하세요
-SELECT MCDP_CD AS 진료과코드, count(*) AS "5월예약건수"
+SELECT MCDP_CD AS '진료과 코드', count(APNT_YMD) AS '5월예약건수'
 FROM APPOINTMENT
-WHERE TO_CHAR(APNT_YMD,'YYYY-MM') = '2022-05'
+WHERE APNT_YMD >= '2022-5-1' AND APNT_YMD <'2022-06-01'
 GROUP BY MCDP_CD
-ORDER BY "5월예약건수" ASC, "진료과코드" ASC
+ORDER BY count(APNT_YMD), MCDP_CD;
