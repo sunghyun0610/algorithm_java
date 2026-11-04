@@ -1,23 +1,30 @@
 import java.util.*;
 class Solution {
+    static Set<String> wordList;
+    static char[] alpha = {'A','E', 'I','O','U'};
     public int solution(String word) {
         int answer = 0;
-        List<String> wordList = new ArrayList<>();
-        String alpha = "AEIOU";
-        recur(alpha,wordList,"");
-        Collections.sort(wordList);
-        answer = wordList.indexOf(word) +1 ;
-        
-        return answer;
+        wordList = new HashSet<>();
+        List<String> list = new ArrayList<>();
+        makeWord("",0);
+        for(String k : wordList){
+            list.add(k);
+        }
+        Collections.sort(list);
+        answer = list.indexOf(word);
+        return answer+1;
     }
-    static void recur(String alpha, List<String> wordList, String currWord){
-        int wordLen = currWord.length();
-        if(wordLen==5) return;
-        for(int i=0; i<5;i++){
-            String newWord = currWord + alpha.charAt(i);
-            wordList.add(newWord);
-            recur(alpha,wordList,newWord);
+    void makeWord(String curr, int len){
+        if(len==5){
+            wordList.add(curr);
+            return;
+        }
+        if(!curr.equals("")){
+            wordList.add(curr);
+        }
+        for(int i=0;i<alpha.length;i++){
+            char ch = alpha[i];
+            makeWord(curr + ch, len+1);
         }
     }
 }
-//경우의수가 작으므로 완탐가능 5^5
