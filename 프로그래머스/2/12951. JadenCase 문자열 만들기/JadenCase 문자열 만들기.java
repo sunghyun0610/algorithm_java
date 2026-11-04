@@ -1,33 +1,29 @@
 class Solution {
     public String solution(String s) {
         StringBuilder answer = new StringBuilder();
-        
+        int idx =1;
         int len = s.length();
-        boolean first = true;
-        for(int i=0;i <len;i++){
-            char ch = s.charAt(i);
-            
-            if(ch==' '){
-                first = true;
-                answer.append(ch);
-                continue;
+        char firstCh = s.charAt(0);
+        answer.append(Character.toUpperCase(firstCh));
+        while(idx<len){
+            char ch = s.charAt(idx);
+            if(ch == ' '){
+                while(idx<len && s.charAt(idx) ==' '){
+                    answer.append(' ');
+                    idx++;
+                }
+                if(idx<len){
+                    answer.append(Character.toUpperCase(s.charAt(idx)));
+                    idx++;
+                }
             }
-            
-            if(first){//첫글자인지 아닌지
-               
-                    char big = Character.toUpperCase(ch);
-                    answer.append(big);
-                
-                first= false;
+            else{
+                answer.append(Character.toLowerCase(s.charAt(idx)));
+                idx++;
             }
-            else{//첫번째 문자가 아닌경우
-                answer.append(Character.toLowerCase(ch));
-            }
-            
-            
-         }
+        }
         
-
         return answer.toString();
     }
+  
 }
