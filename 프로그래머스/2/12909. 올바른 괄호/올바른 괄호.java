@@ -6,19 +6,16 @@ class Solution {
         int sum2=0;
         Stack<Character> stack = new Stack<>();
         for(int i=0; i<s.length();i++){
-            stack.push(s.charAt(i));
-        }
-        if(stack.peek()=='(') return false;
-        if(s.charAt(0)==')') return false;
-        while(!stack.isEmpty()){
-            if(stack.pop()==')'){
-                sum2++;
-            }else{
-                sum1++;
+            char ch = s.charAt(i);
+            if(ch=='('){
+                stack.push('(');
             }
-            if(sum1>sum2) return false;
+            else{
+                if(stack.isEmpty()) return false;
+                else stack.pop();
+            }
         }
-        if(sum1==sum2) answer = true;
-        return answer;
+       if(stack.isEmpty()) return true;
+        else return false;
     }
 }
