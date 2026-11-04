@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 57.2 MB, 시간: 16.78 ms
+메모리: 59.1 MB, 시간: 13.87 ms
 
 ### 구분
 
@@ -16,56 +16,56 @@
 
 ### 제출 일자
 
-2025년 03월 11일 17:25:50
+2026년 11월 04일 19:12:17
 
 ### 문제 설명
 
-<p>괄호가 바르게 짝지어졌다는 것은 '(' 문자로 열렸으면 반드시 짝지어서 ')' 문자로 닫혀야 한다는 뜻입니다. 예를 들어</p>
+<p style="user-select: auto !important;">괄호가 바르게 짝지어졌다는 것은 '(' 문자로 열렸으면 반드시 짝지어서 ')' 문자로 닫혀야 한다는 뜻입니다. 예를 들어</p>
 
-<ul>
-<li>"()()" 또는 "(())()" 는 올바른 괄호입니다.</li>
-<li>")()(" 또는 "(()(" 는 올바르지 않은 괄호입니다.</li>
+<ul style="user-select: auto !important;">
+<li style="user-select: auto !important;">"()()" 또는 "(())()" 는 올바른 괄호입니다.</li>
+<li style="user-select: auto !important;">")()(" 또는 "(()(" 는 올바르지 않은 괄호입니다.</li>
 </ul>
 
-<p>'(' 또는 ')' 로만 이루어진 문자열 s가 주어졌을 때, 문자열 s가 올바른 괄호이면 true를 return 하고, 올바르지 않은 괄호이면 false를 return 하는 solution 함수를 완성해 주세요.</p>
+<p style="user-select: auto !important;">'(' 또는 ')' 로만 이루어진 문자열 s가 주어졌을 때, 문자열 s가 올바른 괄호이면 true를 return 하고, 올바르지 않은 괄호이면 false를 return 하는 solution 함수를 완성해 주세요.</p>
 
-<h5>제한사항</h5>
+<h5 style="user-select: auto !important;">제한사항</h5>
 
-<ul>
-<li>문자열 s의 길이 : 100,000 이하의 자연수</li>
-<li>문자열 s는 '(' 또는 ')' 로만 이루어져 있습니다.</li>
+<ul style="user-select: auto !important;">
+<li style="user-select: auto !important;">문자열 s의 길이 : 100,000 이하의 자연수</li>
+<li style="user-select: auto !important;">문자열 s는 '(' 또는 ')' 로만 이루어져 있습니다.</li>
 </ul>
 
-<hr>
+<hr style="user-select: auto !important;">
 
-<h5>입출력 예</h5>
-<table class="table">
-        <thead><tr>
-<th>s</th>
-<th>answer</th>
+<h5 style="user-select: auto !important;">입출력 예</h5>
+<table class="table" style="user-select: auto !important;">
+        <thead style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<th style="user-select: auto !important;">s</th>
+<th style="user-select: auto !important;">answer</th>
 </tr>
 </thead>
-        <tbody><tr>
-<td>"()()"</td>
-<td>true</td>
+        <tbody style="user-select: auto !important;"><tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">"()()"</td>
+<td style="user-select: auto !important;">true</td>
 </tr>
-<tr>
-<td>"(())()"</td>
-<td>true</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">"(())()"</td>
+<td style="user-select: auto !important;">true</td>
 </tr>
-<tr>
-<td>")()("</td>
-<td>false</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">")()("</td>
+<td style="user-select: auto !important;">false</td>
 </tr>
-<tr>
-<td>"(()("</td>
-<td>false</td>
+<tr style="user-select: auto !important;">
+<td style="user-select: auto !important;">"(()("</td>
+<td style="user-select: auto !important;">false</td>
 </tr>
 </tbody>
       </table>
-<h5>입출력 예 설명</h5>
+<h5 style="user-select: auto !important;">입출력 예 설명</h5>
 
-<p>입출력 예 #1,2,3,4<br>
+<p style="user-select: auto !important;">입출력 예 #1,2,3,4<br style="user-select: auto !important;">
 문제의 예시와 같습니다.</p>
 
 
