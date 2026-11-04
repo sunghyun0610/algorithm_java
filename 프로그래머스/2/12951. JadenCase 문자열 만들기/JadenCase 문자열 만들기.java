@@ -1,29 +1,21 @@
 class Solution {
     public String solution(String s) {
-        StringBuilder answer = new StringBuilder();
-        int idx =1;
+        StringBuilder sb = new StringBuilder();
+        int idx=0;
         int len = s.length();
-        char firstCh = s.charAt(0);
-        answer.append(Character.toUpperCase(firstCh));
         while(idx<len){
             char ch = s.charAt(idx);
-            if(ch == ' '){
-                while(idx<len && s.charAt(idx) ==' '){
-                    answer.append(' ');
-                    idx++;
-                }
-                if(idx<len){
-                    answer.append(Character.toUpperCase(s.charAt(idx)));
-                    idx++;
-                }
+            if(idx==0){
+                sb.append(Character.toUpperCase(ch));
+            }
+            else if(s.charAt(idx-1)==' '){
+                sb.append(Character.toUpperCase(ch));
             }
             else{
-                answer.append(Character.toLowerCase(s.charAt(idx)));
-                idx++;
+                sb.append(Character.toLowerCase(ch));
             }
+            idx++;
         }
-        
-        return answer.toString();
+        return sb.toString();
     }
-  
 }
