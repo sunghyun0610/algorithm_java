@@ -13,13 +13,7 @@ class Solution {
             boolean bool = true;
             for(int j=i;j<i+10;j++){
                 String pName = discount[j];
-                if(tempMap.containsKey(pName)){
-                    int cnt = tempMap.get(pName);
-                    tempMap.put(pName,cnt+1);
-                }
-                else{
-                    tempMap.put(pName,1);
-                }
+                tempMap.put(pName, tempMap.getOrDefault(pName,0)+1);
             }
             for(String k : wantMap.keySet()){
                 int wantCnt = wantMap.get(k);
