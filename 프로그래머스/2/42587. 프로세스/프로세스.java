@@ -23,10 +23,9 @@ class Solution {
             Process tmp = queue.peek();
             Process waitTmp = waitQueue.peek();
             if(tmp.priority == waitTmp.priority){//나올 차례가 맞음
-                queue.poll();
                 waitQueue.poll();
-
-                if (tmp.id == location) return cnt;
+                Process k = queue.poll();
+                if(k.id==location) return cnt;
                 cnt++;
             }
             else{
