@@ -1,24 +1,35 @@
 class Solution {
     public int solution(String[] babbling) {
         int answer = 0;
-        String [] words = {"aya", "ye", "woo", "ma"};
+        // int[] word = {"aya","ye",""}
         for(int i=0; i<babbling.length;i++){
-            String[] split = babbling[i].split("aya|ye|woo|ma");
-            for(String str : split){
-                System.out.println(str);
+            String str = babbling[i];
+            String lastStr = "";
+            while(str.length()>0){
+                if(str.startsWith("aya")){
+                    if(lastStr.equals("aya")) break;
+                    str= str.substring(3);
+                    lastStr="aya";
+                }else if(str.startsWith("ye")){
+                    if(lastStr.equals("ye")) break;
+                    str = str.substring(2);
+                    lastStr = "ye";
+                }
+                else if(str.startsWith("woo")){
+                    if(lastStr.equals("woo")) break;
+                    str = str.substring(3);
+                    lastStr="woo";
+                }
+                else if(str.startsWith("ma")){
+                    if(lastStr.equals("ma")) break;
+                    str = str.substring(2);
+                    lastStr="ma";
+                }
+                else break;//발음 할 수 없는 거임
             }
-            if(split.length==0){//위 4글자로만 이루어졌다는 것 증명 -> 반복되는 문구 걸러야댐
-                if(!(babbling[i].contains("ayaaya")) && !(babbling[i].contains("yeye")) &&
-                                                         !(babbling[i].contains("woowoo"))&&
-                                                          !(babbling[i].contains("mama"))){
-                                                             answer++;
-                                                         }
-            }
-            
-            }
-
+            if(str.length()==0) answer++;
+        }
         return answer;
     }
 }
-//네 가지 발음 , 연속해서 같은 발음 못함
-//4단어의 조합으로 만들어진 단어는 발음 가능하다.
+//연속 같은 발음도 안됨
