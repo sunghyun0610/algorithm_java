@@ -22,6 +22,8 @@ class Solution {
             if(mine==other){
                 answer++;
                 isFirst=true;
+                mine=0;
+                other=0;
             }
             else{
                 if(idx==s.length()) answer++;
