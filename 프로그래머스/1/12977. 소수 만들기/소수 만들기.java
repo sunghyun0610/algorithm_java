@@ -11,6 +11,7 @@ class Solution {
     void makeComb(int[] nums, int cnt, int currNum, int start){
         // if(idx>=nums.length) return;
         if(cnt==3){
+            // System.out.println("ㅇ");
             if(isPrime(currNum)) answer++;
             return;
         }
