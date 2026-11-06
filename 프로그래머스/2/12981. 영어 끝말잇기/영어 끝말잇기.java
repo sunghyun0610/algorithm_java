@@ -11,10 +11,8 @@ class Solution {
             int len = str.length();
             if(lastCh!=str.charAt(0)){
                 //규칙 1 위해
-                answer[0] = (i+1)%n;
-                if((i+1) % n ==0) answer[0] = n;
-                answer[1] = (i+1)/n +1;
-                if((i+1)%n==0) answer[1] = (i+1)/n;
+                answer[0] = (i%n) +1;
+                answer[1] = (i/n) +1;
                 break;
             }
             if(usedList.contains(str)){
